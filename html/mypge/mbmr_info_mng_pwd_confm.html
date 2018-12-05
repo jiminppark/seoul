@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>회원정보관리 | 서울시 연수원</title>
+
+	<link rel="apple-touch-icon" href="../../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../../resources/img/common/ico_favicon.ico">
+
+	<link rel="stylesheet" href="../../resources/css/ui.base.css">
+
+	<script src="../../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../../resources/js/lib/jquery-ui.min.js"></script>
+	<script src="../../resources/js/lib/jquery.smoothwheel.js"></script>
+	<script src="../../resources/js/lib/owl.carousel.js"></script>
+
+	<script src="../../resources/js/ui.plugins.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>
+	<script src="../../resources/js/ui.page.js"></script>
+
+</head>
+
+<body>
+<div class="base-skip" id="baseSkip"></div>
+<div class="base-layer" id="baseLayer"></div>
+<div class="base-wrap" id="baseWrap">
+	<header class="base-header" id="baseHeader"></header>
+	<main class="base-main" id="baseMain" role="main">
+		<div class="base-content" id="baseContent">
+
+			<!-- content ---------------------------------------------------------------------------------------------- -->
+			<div class="page-title-area mypage">
+				<h2 class="page-title">마이페이지</h2>
+				<p class="page-title_en">MY PAGE</p>
+			</div>
+			<div class="has-lnb">
+				<div class="lnb-wrap">
+					<p class="lnb-title h-type_c">마이페이지</p>
+					<ul>
+						<li><a href="rsv_brkdw_list.html">예약 내역</a></li>
+						<li><a href="rsv_use_list.html">이용 내역</a></li>
+						<li><a href="panalty_brkdw.html">패널티 내역</a></li>
+						<li><a href="mbmr_info_mng_pwd_confm.html" class="active">회원정보관리</a></li>
+					</ul>
+				</div>
+
+				<div class="contents-area">
+					<!-- S : title area -->
+					<div class="title-box">
+						<h2 class="h-type_a">회원정보관리</h2>
+						<div class="breadcrumb">
+							<span class="breadcrumb-item">홈</span>
+							<span class="breadcrumb-item">마이페이지</span>
+							<span class="breadcrumb-item">회원정보관리</span>
+						</div>
+					</div>
+					<!-- E : title area -->
+
+					<!-- S : table area -->
+					<p class="fsize-b mgt-m point-col4 txt-c">개인정보 보호를 위해 비밀번호를 입력해주세요.</p>
+					<table class="tb-type_b mgt-m">
+						<caption>회원 정보 수정</caption>
+						<colgroup>
+							<col class="cols-w4">
+							<col class="col-auto">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">아이디</th>
+							<td>gdhong</td>
+						</tr>
+						<tr>
+							<th scope="row">비밀번호</th>
+							<td>
+								<div class="form-row half">
+									<div class="form-col">
+										<input type="password" value="" placeholder="">
+									</div>
+								</div>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+					<p class="error-txt point-col3 mgt-xs"><i>!</i>에러 메세지 노출</p>
+					<!-- E : table area -->
+
+					<!-- S : button area -->
+					<div class="btn-area mgt-ms">
+						<button type="button" class="btn-basic3 big">확인</button>
+					</div>
+					<!-- E : button area -->
+				</div>
+			</div>
+
+			<!-- //content ---------------------------------------------------------------------------------------------- -->
+
+		</div>
+	</main>
+	<footer class="base-footer" id="baseFooter"></footer>
+</div>
+
+<script>
+    ;(function($, win, doc, undefined) {
+        $(doc).ready(function(){
+            console.log('page');
+            $plugins.page.template();
+        });
+    })(jQuery, window, document);
+</script>
+</body>
+</html>

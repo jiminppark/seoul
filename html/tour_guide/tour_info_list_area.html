@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+    
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+    <title>관광정보 | 서울시 연수원</title>
+
+	<link rel="apple-touch-icon" href="../../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../../resources/img/common/ico_favicon.ico"> 
+
+	<link rel="stylesheet" href="../../resources/css/ui.base.css">
+
+	<script src="../../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../../resources/js/lib/jquery-ui.min.js"></script>
+	<script src="../../resources/js/lib/jquery.smoothwheel.js"></script>
+    <script src="../../resources/js/lib/owl.carousel.js"></script>
+
+    <script src="../../resources/js/ui.plugins.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+    <script src="../../resources/js/ui.page.js"></script>
+
+</head>
+
+<body>
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-layer" id="baseLayer"></div>
+	<div class="base-wrap" id="baseWrap">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content" id="baseContent">
+
+				<!-- content ---------------------------------------------------------------------------------------------- -->
+				<div class="page-title-area tour-info">
+					<h2 class="page-title">관광안내</h2>
+					<p class="page-title_en">TOURIST INFOMATION </p>
+				</div>
+				
+				<div class="contents-area">
+					<!-- S : title area -->
+					<div class="type_view">
+						<div class="title-box">
+							<h3 class="h-type_a">관광 정보</h3>
+							<div class="breadcrumb">
+								<span class="breadcrumb-item">홈</span>
+								<span class="breadcrumb-item">관광안내</span>
+								<span class="breadcrumb-item">관광 정보</span>
+							</div>
+						</div>
+					</div>
+					<!-- E : title area -->
+
+					<div class="ui-tab tab-type_a no-line mgt-ms" id="tourinfoTab">
+						<div class="ui-tab-btns">
+							<button type="button" class="ui-tab-btn"><i>지역별 관광 정보</i></button>
+							<button type="button" class="ui-tab-btn"><i>연수원 주변 관광 정보</i></button>
+						</div>
+						<div class="ui-tab-pnls">
+							<!-- S : 지역별 관광 정보 -->
+							<section class="ui-tab-pnl">
+								<!-- S : search area -->
+								<div class="sh-tb-area mgt-s">
+									<table>
+										<colgroup>
+											<col class="cols-w3">
+											<col class="col-auto">
+										</colgroup>
+										<tbody>
+										<tr>
+											<th scope="row">관광타입</th>
+											<td>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour01">
+													<label for="tour01">전체</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour02">
+													<label for="tour02">관광지</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour03">
+													<label for="tour03">문화시설</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour04">
+													<label for="tour04">축제공연행사</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour05">
+													<label for="tour05">여행코스</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour06">
+													<label for="tour06">레포츠</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour07">
+													<label for="tour07">숙박</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour08">
+													<label for="tour08">쇼핑</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour09">
+													<label for="tour09">음식점</label>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">서비스분류</th>
+											<td>
+												<div class="form-row">
+													<div class="form-col col-w01">
+														<div class="ui-select">
+															<select class="sel_type" id="selChoice01">
+																<option selected="selected">대분류</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-col col-w01">
+														<div class="ui-select">
+															<select class="sel_type" id="selChoice02">
+																<option selected="selected">중분류</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-col">
+														<div class="ui-select">
+															<select class="sel_type" id="selChoice03" disabled="disabled">
+																<option selected="selected">소분류</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">지역</th>
+											<td>
+												<div class="form-row">
+													<div class="form-col col-w01">
+														<div class="ui-select">
+															<select class="sel_type" id="selChoice04">
+																<option selected="selected">지역</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-col col-w01">
+														<div class="ui-select">
+															<select class="sel_type" id="selChoice05">
+																<option selected="selected">시군구</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-col">
+													</div>
+												</div>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+									<button type="button" class="btn-basic3">조회</button>
+								</div>
+								<!-- E : search area -->
+							</section>
+							<!-- E : 지역별 관광 정보 -->
+							<!-- S : 연수원 주변 관광 정보 -->
+							<section class="ui-tab-pnl">
+								<!-- S : search area -->
+								<div class="sh-tb-area mgt-s">
+									<table>
+										<colgroup>
+											<col class="cols-w3">
+											<col class="col-auto">
+										</colgroup>
+										<tbody>
+										<tr>
+											<th scope="row">관광타입</th>
+											<td>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour11">
+													<label for="tour11">전체</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour12">
+													<label for="tour12">관광지</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour13">
+													<label for="tour13">문화시설</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour14">
+													<label for="tour14">축제공연행사</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour15">
+													<label for="tour15">여행코스</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour16">
+													<label for="tour16">레포츠</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour17">
+													<label for="tour17">숙박</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour18">
+													<label for="tour18">쇼핑</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="tour19">
+													<label for="tour19">음식점</label>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">기준지</th>
+											<td>
+												<div class="form-row">
+													<div class="form-col">
+														<div class="ui-select">
+															<select class="sel_type" id="selChoice01">
+																<option selected="selected">선택</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">반경</th>
+											<td>
+												<div class="form-row with-txt">
+													<div class="form-col col-w01">
+														<input type="text">
+													</div>
+													<div class="form-col_txt2">m</div>
+													<div class="form-col">※반경은 20,000m(20km) 까지 가능합니다.</div>
+												</div>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+									<button type="button" class="btn-basic3">조회</button>
+								</div>
+								<!-- E : search area -->
+							</section>
+							<!-- E : 연수원 주변 관광 정보 -->
+						</div>
+					</div>
+
+					<!-- S : sort area -->
+					<div class="sh-wrap_b mgt-s">
+						<form action="">
+							<fieldset>
+								<legend>검색</legend>
+								<div class="table-search_a">
+									<div class="sh-item-from apply">
+										<div class="ui-select">
+											<select class="sel_type" id="areaChoic2">
+												<option selected="selected">제목순</option>
+												<option>인기순</option>
+												<option>최근수정순</option>
+												<option>등록순</option>
+											</select>
+										</div>
+										<button type="button" class="btn-basic2">적용</button>
+									</div>
+									<div class="sh-total">
+										<span>총 103건 ( <em class="point-col2">1</em> / 11 Page)</span>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<!-- E : sort area -->
+
+					<!-- S : result list -->
+					<ul class="photo-list">
+						<li class="photo-item">
+							<a href="" class="photo-box">
+								<div class="photo-box-img">
+									<img src="../../resources/img/temp/photo01.jpg" alt="">
+								</div>
+								<p class="photo-name clamp">소야촌</p>
+							</a>
+						</li>
+						<li class="photo-item">
+							<a href="" class="photo-box">
+								<div class="photo-box-img">
+									<img src="../../resources/img/temp/photo01.jpg" alt="">
+
+								</div>
+								<p class="photo-name clamp">속초 등대전망대</p>
+							</a>
+						</li>
+						<li class="photo-item">
+							<a href="" class="photo-box">
+								<div class="photo-box-img">
+									<img src="../../resources/img/temp/photo01.jpg" alt="">
+								</div>
+								<p class="photo-name clamp">속초 바다낚시</p>
+							</a>
+						</li>
+						<li class="photo-item">
+							<a href="" class="photo-box">
+								<div class="photo-box-img">
+									<img src="../../resources/img/temp/photo01.jpg" alt="">
+								</div>
+								<p class="photo-name clamp">속초 빛축제 ‘청초환희‘ 2018</p>
+							</a>
+						</li>
+						<li class="photo-item">
+							<a href="" class="photo-box">
+								<div class="photo-box-img">
+									<img src="../../resources/img/temp/photo01.jpg" alt="">
+								</div>
+								<p class="photo-name clamp">소야촌</p>
+							</a>
+						</li>
+						<li class="photo-item">
+							<a href="" class="photo-box">
+								<div class="photo-box-img">
+									<img src="../../resources/img/temp/photo01.jpg" alt="">
+
+								</div>
+								<p class="photo-name clamp">속초 등대전망대</p>
+							</a>
+						</li>
+						<li class="photo-item">
+							<a href="" class="photo-box">
+								<div class="photo-box-img">
+									<img src="../../resources/img/temp/photo01.jpg" alt="">
+								</div>
+								<p class="photo-name clamp">속초 바다낚시</p>
+							</a>
+						</li>
+						<li class="photo-item">
+							<a href="" class="photo-box">
+								<div class="photo-box-img">
+									<img src="../../resources/img/temp/photo01.jpg" alt="">
+								</div>
+								<p class="photo-name clamp">속초 빛축제 ‘청초환희‘ 2018</p>
+							</a>
+						</li>
+					</ul>
+					<!-- E : result list -->
+
+					<!-- S : search area -->
+					<div class="paging-area">
+						<div class="paging">
+							<a href="#" title="처음" class="ico_fromb pprev"></a>
+							<a href="#" title="이전" class="ico_fromb prev"></a>
+							<a href="#">1</a>
+							<a href="#" class="active">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#" title="다음" class="ico_fromb next"></a>
+							<a href="#" title="마지막" class="ico_fromb nnext"></a>
+						</div>
+					</div>
+					<!-- E : search area -->
+				</div>
+	
+				<!-- //content ---------------------------------------------------------------------------------------------- -->
+
+			</div>
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			console.log('page');
+            $plugins.page.menuID = 'M03_01';
+
+            //page script
+            $plugins.page.tour();
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

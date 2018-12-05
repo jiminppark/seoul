@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+    
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+    <title>연수후기 | 서울시 연수원</title>
+
+	<link rel="apple-touch-icon" href="../../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../../resources/img/common/ico_favicon.ico"> 
+
+	<link rel="stylesheet" href="../../resources/css/ui.base.css">
+
+	<script src="../../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../../resources/js/lib/jquery-ui.min.js"></script>
+	<script src="../../resources/js/lib/jquery.smoothwheel.js"></script>
+    <script src="../../resources/js/lib/owl.carousel.js"></script>
+
+    <script src="../../resources/js/ui.plugins.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+    <script src="../../resources/js/ui.page.js"></script>
+
+</head>
+
+<body>
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-layer" id="baseLayer"></div>
+	<div class="base-wrap" id="baseWrap">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content" id="baseContent">
+				
+				<!-- content ---------------------------------------------------------------------------------------------- -->
+				<div class="page-title-area community">
+					<h2 class="page-title">참여마당</h2>
+					<p class="page-title_en">COMMUNITY</p>
+				</div>
+				
+				<div class="contents-area">
+					<!-- S : title area -->
+					<div class="type_view">
+						<div class="title-box">
+							<h2 class="h-type_a">연수후기</h2>
+							<div class="breadcrumb">
+								<span class="breadcrumb-item">홈</span>
+								<span class="breadcrumb-item">참여마당</span>
+								<span class="breadcrumb-item">연수후기</span>
+							</div>
+						</div>
+					</div>
+					<!-- E : title area -->
+
+					<!-- S : table area -->
+					<table class="tb-type_b mgt-m">
+						<caption>문의글 작성</caption>
+						<colgroup>
+							<col class="cols-w4">
+							<col class="col-auto">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">연수원</th>
+							<td>
+								<div class="m-full">
+									<div class="ui-select">
+										<select class="sel_type" id="areaChoice">
+											<option selected="selected">선택</option>
+											<option>속초</option>
+											<option>서천</option>
+											<option>수안보</option>
+										</select>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">제목</th>
+							<td>
+								<input type="text" value="" placeholder="" class="in-w100">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">내용</th>
+							<td>
+								<div class="textarea_wrap">
+									<textarea name="" cols="30" rows="10"></textarea>
+								</div>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+					<!-- E : table area -->
+
+					<!-- S : button area -->
+					<div class="btn-area mgt-ms">
+						<button type="button" class="btn-basic1">목록</button>
+						<button type="button" class="btn-basic3">등록</button>
+					</div>
+					<!-- E : button area -->
+				</div>
+	
+				<!-- //content ---------------------------------------------------------------------------------------------- -->
+
+			</div>
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			console.log('page');
+            $plugins.page.template();
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

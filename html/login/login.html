@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>로그인 | 서울시 연수원</title>
+
+	<link rel="apple-touch-icon" href="../../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../../resources/img/common/ico_favicon.ico">
+
+	<link rel="stylesheet" href="../../resources/css/ui.base.css">
+
+	<script src="../../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../../resources/js/lib/jquery-ui.min.js"></script>
+	<script src="../../resources/js/lib/jquery.smoothwheel.js"></script>
+	<script src="../../resources/js/lib/owl.carousel.js"></script>
+
+	<script src="../../resources/js/ui.plugins.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>
+	<script src="../../resources/js/ui.page.js"></script>
+	<!--<script>
+        $(document).ready(function() {
+            $(".login-banner .ico_close").click(function () {
+                $('.login-banner').css('display', 'none');
+            });
+        })
+	</script>-->
+
+</head>
+
+<body>
+<!-- S : banner -->
+<!--<div class="login-banner">
+	<div class="contents-area">
+		<p class="fsize-b point-col2">회원통합 진행중입니다.</p>
+		<p class="fsize-m point-col3 mgt-xs">기존 연수원 아이디로는 로그인을 진행하실 수 없습니다.</p>
+		<p>기존 속초연수원, 서천/수안보 연수원 사이트에 ID를 보유하고 계신분은 하단의 <span class="point-col2">‘회원통합’</span> 버튼을 눌러 회원통합을 진행하여 주십시오. </p>
+	</div>
+	<button type="button" class="ico_common ico_close">닫기</button>
+</div>-->
+<!-- E : banner -->
+<div class="base-skip" id="baseSkip"></div>
+<div class="base-layer" id="baseLayer"></div>
+<div class="base-wrap" id="baseWrap">
+	<header class="base-header" id="sHeader"></header>
+	<main class="base-main" id="baseMain" role="main">
+		<div class="base-content" id="baseContent">
+
+			<!-- content ---------------------------------------------------------------------------------------------- -->
+
+			<div class="contents-area">
+				<!-- S : title area -->
+				<div class="title-box type-b">
+					<h2 class="h-type_a">로그인</h2>
+				</div>
+				<!-- E : title area -->
+
+				<!-- S : login area -->
+				<div class="small-area mgt-m">
+					<div class="login-form">
+						<div class="form-row mgt-s">
+							<div class="form-col"><input type="text" placeholder="아이디"></div>
+						</div>
+						<div class="form-row">
+							<div class="form-col"><input type="password" placeholder="비밀번호"></div>
+						</div>
+						<div class="btn-login"><button type="button" class="btn-basic3">로그인</button></div>
+					</div>
+					<p class="error-txt point-col3 mgt-xs"><i>!</i>에러 메세지 노출</p>
+					<div class="login-nav mgt-s">
+						<a href="">회원가입</a>
+						<a href="">아이디/비밀번호 찾기</a>
+					</div>
+					<div class="location">
+						<a href="" class="point-col2"><i class="ico_common ico_map"></i>찾아오는 길</a>
+					</div>
+				</div>
+				<!-- E : login area -->
+				<footer class="small-footer" id="sFooter"></footer>
+			</div>
+
+			<!-- //content ---------------------------------------------------------------------------------------------- -->
+
+		</div>
+	</main>
+</div>
+
+<script>
+    ;(function($, win, doc, undefined) {
+        $(doc).ready(function(){
+            console.log('page');
+            $plugins.page.template();
+        });
+    })(jQuery, window, document);
+</script>
+</body>
+</html>

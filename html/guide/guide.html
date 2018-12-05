@@ -1,0 +1,1066 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+    
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+    <title>기본 템플릿 페이지 | 서울시 연수원</title>
+
+	<link rel="apple-touch-icon" href="../../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../../resources/img/common/ico_favicon.ico"> 
+
+	<link rel="stylesheet" href="../../resources/css/ui.base.css">
+
+	<script src="../../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../../resources/js/lib/jquery-ui.min.js"></script>
+	<script src="../../resources/js/lib/jquery.smoothwheel.js"></script>
+    <script src="../../resources/js/lib/owl.carousel.js"></script>
+
+    <script src="../../resources/js/ui.plugins.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+    <script src="../../resources/js/ui.page.js"></script>
+
+    <style>
+        body{background:linear-gradient(to top right, #ffeff0 0%, #dcf6e7 100%);
+            background:#ffeff0; /* Old browsers */
+            background:-moz-linear-gradient(45deg, #ffeff0 1%, #dcf6e7 100%); /* FF3.6-15 */
+            background:-webkit-linear-gradient(45deg, #ffeff0 1%,#dcf6e7 100%); /* Chrome10-25,Safari5.1-6 */
+            background:linear-gradient(45deg, #ffeff0 1%,#dcf6e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeff0', endColorstr='#dcf6e7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+        .btnTop {position:fixed;z-index:50;overflow:hidden;width:30px;height:30px;right:10px;bottom:10px}
+        .btnTop a {display:block;width:30px;height:30px;background:url("../../btn_top.png") no-repeat 0 0;text-indent:-9999em;opacity:.7}
+        .btnTop a:hover {opacity:1}
+        .list_box_wrap {padding:0 20px 20px 20px;min-width:1000px}
+        .tabs {background-color:#309df1;position:fixed;top:0;right:0;left:0;z-index:49}
+        .tabs .logo {position:absolute;width:150px;top:0;left:0;height:50px;line-height:50px;color:#fff;font-weight:bold;text-align:center;background-color:#000;font-size:16px}
+        .tabs ul {overflow:hidden;margin-left:150px}
+        .tabs ul li {float:left;width:14.25%}
+        .tabs ul li a {display:block;text-align:center;height:50px;line-height:50px;font-weight:bold;color:#fff;font-size:13px;position:relative;font-family:'verdana'}
+        .tabs ul li a.active {background-color:#cf214d}
+        .tabs ul li a:after {content:'';position:absolute;top:0;right:0;bottom:0;width:1px;background-color:rgba(255,255,255,.3)}
+        .tabs ul li:last-child {width:14.5%}
+        .tabs ul li:last-child a:after{display:none}
+
+        .h1 {font-weight:bold;font-size:18px;color:#000;margin-bottom:10px;font-family:'verdana';padding-top:60px}
+        .h2 {background-color:#e0f2e8;margin:0 -20px;height:30px;line-height:30px;padding:0 20px;font-weight:bold;margin-bottom:10px}
+        .box_wrap {border:1px solid #ddd;padding:0 20px 0 20px;background-color:#fff}
+        .type_view {padding-bottom:20px;max-width:1280px}
+        .type_view .sbt {margin-bottom:5px;color:#333}
+        .type_view .sbt ~ .sbt {margin-top:10px}
+        .type_view.btn_view button {margin-right:20px}
+        .type_view > .checkbox, .type_view > .radio {margin-right:15px}
+        @media (max-width:768px) {
+            .list_box_wrap {min-width:1px}
+        }
+    </style>
+</head>
+
+<body>
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-layer" id="baseLayer"></div>
+	<div class="base-wrap" id="baseWrap">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content" id="baseContent">
+				
+				<!-- content ---------------------------------------------------------------------------------------------- -->
+
+                <div class="list_box_wrap">
+                    <div class="tabs">
+                        <p class="logo">서울시 연수원</p>
+                        <ul class="tab_nav">
+                            <li><a href="#group01" class="p01">H Tag</a></li>
+                            <li><a href="#group02" class="p02">Form Tag</a></li>
+                            <li><a href="#group03" class="p03">Text List</a></li>
+                            <li><a href="#group04" class="p04">Product List</a></li>
+                            <li><a href="#group05" class="p05">Button</a></li>
+                            <li><a href="#group06" class="p06">Table</a></li>
+                            <li><a href="#group07" class="p07">UI</a></li>
+                        </ul>
+                    </div>
+                    <div id="group01" class="group_wrap">
+                        <p class="h1">H Tag &amp; P Tag</p>
+                        <div class="box_wrap">
+                            <p class="h2">h-type_a</p>
+                            <div class="type_view">
+                                <h1 class="h-type_a">타이틀</h1>
+                                <div class="title-box">
+                                    <h2 class="h-type_a">예약신청</h2>
+                                    <div class="breadcrumb">
+                                        <span class="breadcrumb-item">홈</span>
+                                        <span class="breadcrumb-item">온라인</span>
+                                        <span class="breadcrumb-item">예약신청</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="h2">h-type_b</p>
+                            <div class="type_view">
+                                <h2 class="h-type_b">큰 단락제목</h2>
+                            </div>
+                            <p class="h2">h-type_c</p>
+                            <div class="type_view">
+                                <h3 class="h-type_c">작은 단락제목</h3>
+                            </div>
+                            <p class="h2">h-type_d</p>
+                            <div class="type_view">
+                                <h3 class="h-type_d">강조 타이틀</h3>
+                            </div>
+                            <p class="h2">txt-type_a</p>
+                            <div class="type_view">
+                                <p class="txt-type_a">본문내용(큰사이즈)</p>
+                            </div>
+                            <p class="h2">txt-type_b</p>
+                            <div class="type_view">
+                                <p class="txt-type_b">본문내용(작은사이즈)</p>
+                            </div>
+                            <p class="h2">point</p>
+                            <div class="type_view">
+                                <p class="txt-type_b point">본문강조</p>
+                            </div>
+                            <p class="h2">text-indent</p>
+                            <div class="type_view">
+                                <p class="text-indent_a">※ 안내문구</p>
+                                <p class="text-indent_a point-col3">※ 강조문구</p>
+                            </div>
+                            <p class="h2">point color</p>
+                            <div class="type_view">
+                                <p class="point-col1">point-col1</p>
+                                <p class="point-col2">point-col2</p>
+                                <p class="point-col3">point-col3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="group02" class="group_wrap">
+                        <p class="h1">Form Tag</p>
+                        <div class="box_wrap">
+                            <p class="h2">Input</p>
+                            <div class="type_view">
+                                <p class="sbt">basic type</p>
+                                <input type="text" value="입력값">
+                                <p class="sbt">basic placeholder type</p>
+                                <input type="text" value="" placeholder="입력값">
+                                <p class="sbt">basic disabled type</p>
+                                <input type="text" value="입력값" disabled>
+                                <p class="sbt">datepicker</p>
+                                <span class="datepicker-box"><input type="text" id="" name="" value="" placeholder="날짜선택" class="inp-date"></span>
+                            </div>
+                            <p class="h2">Select</p>
+                            <div class="type_view">
+                                <p class="sbt">small size type</p>
+                                <div class="ui-select sel_small">
+                                    <select class="sel_type" id="selectID_1">
+                                        <option selected="selected">Slower</option>
+                                        <option>Slow</option>
+                                        <option >Medium</option>
+                                        <option>Fast</option>
+                                        <option>Faster</option>
+                                    </select>
+                                </div>
+                                <p class="sbt">basic type</p>
+                                <div class="ui-select">
+                                    <select class="sel_type" id="selectID_2">
+                                        <option selected="selected">Slower</option>
+                                        <option>Slow</option>
+                                        <option >Medium</option>
+                                        <option>Fast</option>
+                                        <option>Faster</option>
+                                    </select>
+                                </div>
+                                <p class="sbt">basic disabled</p>
+                                <div class="ui-select">
+                                    <select class="sel_type" id="selectID_3" disabled>
+                                        <option selected="selected">Slower</option>
+                                        <option>Slow</option>
+                                        <option >Medium</option>
+                                        <option>Fast</option>
+                                        <option>Faster</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <p class="h2">Radio</p>
+                            <div class="type_view">
+                                <p class="sbt">basic</p>
+                                <span class="radio">
+                                    <input type="radio" name="termType" id="termType1" checked>
+                                    <label for="termType1">선택</label>
+                                </span>
+                                <span class="radio">
+                                    <input type="radio" name="termType" id="termType2">
+                                    <label for="termType2">미선택</label>
+                                </span>
+                                <span class="radio">
+                                    <input type="radio" name="termType02" id="termType3" disabled>
+                                    <label for="termType3">비활성</label>
+                                </span>
+                                <span class="radio">
+                                    <input type="radio" name="termType02" id="termType4" checked disabled>
+                                    <label for="termType4">선택비활성</label>
+                                </span>
+                                <p class="sbt">no label</p>
+                                <span class="radio no_label">
+                                    <input type="radio" name="termType02_2" id="termType5">
+                                    <label for="termType5">선택</label>
+                                </span>
+                            </div>
+                            <p class="h2">Checkbox</p>
+                            <div class="type_view">
+                                <p class="sbt">basic</p>
+                                <span class="checkbox">
+                                    <input type="checkbox" name="" id="termType9" checked>
+                                    <label for="termType9">선택</label>
+                                </span>
+                                <span class="checkbox">
+                                    <input type="checkbox" name="" id="termType6">
+                                    <label for="termType6">미선택</label>
+                                </span>
+                                <span class="checkbox">
+                                    <input type="checkbox" name="" id="termType7" disabled>
+                                    <label for="termType7">비활성</label>
+                                </span>
+                                <span class="checkbox">
+                                    <input type="checkbox" name="" id="termType8" checked disabled>
+                                    <label for="termType8">선택비활성</label>
+                                </span>
+                                <p class="sbt">no label</p>
+                                <span class="checkbox no_label">
+                                    <input type="checkbox" name="" id="termType10">
+                                    <label for="termType10">선택</label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="group03" class="group_wrap">
+                        <p class="h1">Text List</p>
+                        <div class="box_wrap" style="min-height:400px">
+                            <p class="h2">Dot List</p>
+                            <p class="sbt">dot_list(big)</p>
+                            <div class="type_view">
+                                <ul class="dot_list">
+                                    <li>안내문구</li>
+                                    <li>안내문구 안내문구 안내문구</li>
+                                </ul>
+                            </div>
+                            <p class="sbt">dot_list(small)</p>
+                            <div class="type_view">
+                                <ul class="dot_list small">
+                                    <li>안내문구</li>
+                                    <li>안내문구 안내문구 안내문구</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="group04" class="group_wrap">
+                        <p class="h1">Product List</p>
+                        <div class="box_wrap">
+                            <p class="h2">3단</p>
+                            <div class="type_view">
+                                <div class="box-module_a">
+                                    <div class="box-item">
+                                        <div class="img-area"><img src="../../resources/img/temp/room01.jpg" alt=""></div>
+                                        <div class="info-area">
+                                            <dl class="dl-type_a">
+                                                <dt><p class="room-type">A형</p><button type="button" class="btn-basic2 small">찾아보기</button></dt>
+                                                <dd>29.28m<sup>2</sup>/최대 7인<br>성수기 비수기</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="check-area">
+                                            <span class="checkbox round">
+                                                <input type="checkbox" name="" id="termType001">
+                                                <label for="termType001">객실선택하기</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="box-item">
+                                        <div class="img-area"><img src="../../resources/img/temp/room02.jpg" alt=""></div>
+                                        <div class="info-area">
+                                            <dl class="dl-type_a">
+                                                <dt><p class="room-type">B형</p><button type="button" class="btn-basic2 small">찾아보기</button></dt>
+                                                <dd>29.28m<sup>2</sup>/최대 7인<br>성수기 비수기</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="check-area">
+                                            <span class="checkbox round">
+                                                <input type="checkbox" name="" id="termType002">
+                                                <label for="termType002">객실선택하기</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="box-item active">
+                                        <div class="img-area"><img src="../../resources/img/temp/room01.jpg" alt=""></div>
+                                        <div class="info-area">
+                                            <dl class="dl-type_a">
+                                                <dt><p class="room-type">C형</p><button type="button" class="btn-basic2 small">찾아보기</button></dt>
+                                                <dd>29.28m<sup>2</sup>/최대 7인<br>성수기 비수기</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="check-area">
+                                            <span class="checkbox round">
+                                                <input type="checkbox" name="" id="termType003" checked="checked">
+                                                <label for="termType003">객실선택하기</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="h2">1단</p>
+                            <div class="type_view">
+                                <div class="box-module_b">
+                                    <div class="box-item">
+                                        <div class="img-area"><img src="../../resources/img/temp/room03.jpg" alt=""></div>
+                                        <div class="info-area">
+                                            <div class="room-type-area">
+                                                <p class="room-type">A타입(60M<sup>2</sup>)</p>
+                                                <button type="button" class="btn-basic1">예약하기</button>
+                                            </div>
+                                            <div class="room-info">
+                                                <div class="room-info-group">
+                                                    <dl class="dl-type_b">
+                                                        <dt class="dot-item">객실전망 :</dt>
+                                                        <dd>북쪽 방향</dd>
+                                                        <dt class="dot-item">객실타입 :</dt>
+                                                        <dd>침대방 1개, 온돌방 1개, 화장실 1개</dd>
+                                                        <dt class="dot-item">수용인원 :</dt>
+                                                        <dd>성인 6인</dd>
+                                                    </dl>
+                                                    <dl class="dl-type_b">
+                                                        <dt class="dot-item">포인트 :</dt>
+                                                        <dd>성수기 20포인트 차감 <br>비수기 10포인트 차감</dd>
+                                                    </dl>
+                                                </div>
+                                                <table class="tb-type_d">
+                                                    <caption class="dot-item">비품구성</caption>
+                                                    <colgroup>
+                                                        <col style="width:115px">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                    <tr>
+                                                        <th scope="row">가구류</th>
+                                                        <td>TV받침대/쇼파/식탁/식탁의자/침대매트/침대헤드보드/화장대</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">가전류</th>
+                                                        <td>TV/에어컨/냉장고/전기밥솥/전기쿡탑</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">식기류</th>
+                                                        <td>객실정원에 맞는 식기 일체</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">침구류</th>
+                                                        <td>객실 정원에 맞는 침구류(이불/요/배게)일체</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-item">
+                                        <div class="img-area"><img src="../../resources/img/temp/room04.jpg" alt=""></div>
+                                        <div class="info-area">
+                                            <div class="room-type-area">
+                                                <p class="room-type">B타입(30M<sup>2</sup>)</p>
+                                                <button type="button" class="btn-basic1">예약하기</button>
+                                            </div>
+                                            <div class="room-info">
+                                                <div class="room-info-group">
+                                                    <dl class="dl-type_b">
+                                                        <dt class="dot-item">객실전망 :</dt>
+                                                        <dd>북쪽 방향</dd>
+                                                        <dt class="dot-item">객실타입 :</dt>
+                                                        <dd>침대방 1개, 온돌방 1개, 화장실 1개</dd>
+                                                        <dt class="dot-item">수용인원 :</dt>
+                                                        <dd>성인 6인</dd>
+                                                    </dl>
+                                                    <dl class="dl-type_b">
+                                                        <dt class="dot-item">포인트 :</dt>
+                                                        <dd>성수기 20포인트 차감 <br>비수기 10포인트 차감</dd>
+                                                    </dl>
+                                                </div>
+                                                <table class="tb-type_d">
+                                                    <caption class="dot-item">비품구성</caption>
+                                                    <colgroup>
+                                                        <col style="width:115px">
+                                                        <col style="width:auto">
+                                                    </colgroup>
+                                                    <tbody>
+                                                    <tr>
+                                                        <th scope="row">가구류</th>
+                                                        <td>TV받침대/쇼파/식탁/식탁의자/침대매트/침대헤드보드/화장대</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">가전류</th>
+                                                        <td>TV/에어컨/냉장고/전기밥솥/전기쿡탑</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">식기류</th>
+                                                        <td>객실정원에 맞는 식기 일체</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">침구류</th>
+                                                        <td>객실 정원에 맞는 침구류(이불/요/배게)일체</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="group05" class="group_wrap">
+                        <p class="h1">Button</p>
+                        <div class="box_wrap">
+                            <p class="h2">Big Button</p>
+                            <div class="type_view">
+                                <p class="sbt">basic</p>
+                                <button type="button" class="btn-basic1 big">확인</button>
+                                <button type="button" class="btn-basic2 big">확인</button>
+                                <button type="button" class="btn-basic3 big">확인</button>
+                                <button type="button" class="btn-basic4 big">확인</button>
+                                <button type="button" class="btn-basic5 big">확인</button>
+                                <button type="button" class="btn-basic6 big">확인</button>
+                                <p class="sbt">disabled</p>
+                                <button type="button" class="btn-basic1 big" disabled>확인</button>
+                                <button type="button" class="btn-basic2 big" disabled>확인</button>
+                                <button type="button" class="btn-basic3 big" disabled>확인</button>
+                                <button type="button" class="btn-basic4 big" disabled>확인</button>
+                                <button type="button" class="btn-basic5 big" disabled>확인</button>
+                                <button type="button" class="btn-basic6 big" disabled>확인</button>
+                            </div>
+                            <p class="h2">Middle Button</p>
+                            <div class="type_view">
+                                <button type="button" class="btn-basic1">확인</button>
+                                <button type="button" class="btn-basic2">확인</button>
+                                <button type="button" class="btn-basic3">확인</button>
+                                <button type="button" class="btn-basic4">확인</button>
+                                <button type="button" class="btn-basic5">확인</button>
+                                <button type="button" class="btn-basic6">확인</button>
+                            </div>
+                            <p class="h2">Small Button</p>
+                            <div class="type_view">
+                                <button type="button" class="btn-basic1 small">확인</button>
+                                <button type="button" class="btn-basic2 small">확인</button>
+                                <button type="button" class="btn-basic3 small">확인</button>
+                                <button type="button" class="btn-basic4 small">확인</button>
+                                <button type="button" class="btn-basic5 small">확인</button>
+                                <button type="button" class="btn-basic6 small">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="group06" class="group_wrap">
+                        <p class="h1">Table</p>
+                        <div class="box_wrap">
+                            <p class="h2">table Type A</p>
+                            <div class="type_view">
+                                <table class="tb-type_a">
+                                    <caption></caption>
+                                    <colgroup>
+                                        <col style="width:30%">
+                                        <col style="width:30%">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" colspan="3">상단 타이틀</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">상단 타이틀1</th>
+                                            <th scope="col">상단 타이틀2</th>
+                                            <th scope="col">상단 타이틀3</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>컨텐츠 1</td>
+                                            <td>컨텐츠 2</td>
+                                            <td>컨텐츠 3</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="h2">table Type B</p>
+                            <div class="type_view">
+                                <table class="tb-type_b">
+                                    <caption>caption...</caption>
+                                    <colgroup>
+                                        <col style="width:20%">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">무궁화꽃이피었습니다무궁화꽃이피었습니다</th>
+                                        <td>무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다무궁화꽃이피었습니다</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">222</th>
+                                        <td>bbbb</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">이름</th>
+                                        <td>홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">e-mail</th>
+                                        <td>
+                                            <input type="text" value="" placeholder="입력값" style="width:170px">
+                                            <span class="gap">@</span>
+                                            <input type="text" value="" placeholder="입력값" style="width:220px">
+                                            <select class="sel_type" style="width:170px">
+                                                <option selected="selected">선택</option>
+                                                <option>naver.com</option>
+                                                <option>gmail.com</option>
+                                                <option>nate.com</option>
+                                                <option>yahoo.co.kr</option>
+                                                <option>hanmail.net</option>
+                                                <option>daum.net</option>
+                                                <option>dreamwiz.com</option>
+                                                <option>lycos.co.kr</option>
+                                                <option>empas.com</option>
+                                                <option>korea.com</option>
+                                                <option>paran.com</option>
+                                                <option>freechal.com</option>
+                                                <option>hanmir.com</option>
+                                                <option>hotmail.com</option>
+                                                <option>직접입력</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">연락처</th>
+                                        <td>
+                                            <input type="text" value="" placeholder="입력값" class="w_s">
+                                            <span class="gap">-</span>
+                                            <input type="text" value="" placeholder="입력값" class="w_s">
+                                            <span class="gap">-</span>
+                                            <input type="text" value="" placeholder="입력값" class="w_s">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">답변알림</th>
+                                        <td>
+                                            <div class="radio-group">
+                                                <span class="radio">
+                                                    <input type="radio" name="alarmType" id="alarmType1" checked="">
+                                                    <label for="alarmType1">e-mail</label>
+                                                </span>
+                                                <span class="radio">
+                                                    <input type="radio" name="alarmType" id="alarmType2">
+                                                    <label for="alarmType2">sns</label>
+                                                </span>
+                                                <span class="radio">
+                                                    <input type="radio" name="alarmType" id="alarmType3">
+                                                    <label for="alarmType3">전화</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">제목</th>
+                                        <td><input type="text" value="" placeholder="입력값" style="width:100%"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">내용</th>
+                                        <td>
+                                            <div class="textarea_wrap">
+                                                <textarea placeholder="메세지를 작성해주세요"></textarea>
+                                                <!-- <span class="byte_txt"><em>0</em> / 500 Byte</span> -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">이미지 등록</th>
+                                        <td>
+                                            <div class="file_sh">
+                                                <span class="file_name"></span>
+                                                <input type="file" name="" class="real_file">
+                                                <button type="button" class="btn-basic2 small fake_file">찾아보기</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="h2">table Type C</p>
+                            <div class="type_view">
+                                <table class="tb-type_c">
+                                    <caption></caption>
+                                    <colgroup>
+                                        <col style="width:8%">
+                                        <col style="width:auto">
+                                        <col style="width:13%">
+                                        <col style="width:13%">
+                                        <col style="width:13%">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">NO</th>
+                                        <th scope="col">제목</th>
+                                        <th scope="col">작성자</th>
+                                        <th scope="col">작성일</th>
+                                        <th scope="col">조회수</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>4</td>
+                                        <td class="txt-l"><a href="" class="clamp">제목들어감 제목들어감제목들어감 제목들어감 제목들어감 제목들어감 제목들어감 제목들어감 제목들어감</a><span class="blt-new">N</span></td>
+                                        <td>홍길동</td>
+                                        <td>18-10-15</td>
+                                        <td>58</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="txt-l"><a href="" class="clamp">제목들어감</a><span class="blt-new">N</span></td>
+                                        <td>홍길동</td>
+                                        <td>18-10-15</td>
+                                        <td>58</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="txt-l"><a href="" class="clamp">제목들어감</a></td>
+                                        <td>홍길동</td>
+                                        <td>18-10-15</td>
+                                        <td>58</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="txt-l"><a href="" class="clamp">제목들어감 제목들어감 제목들어감 제목들어감</a></td>
+                                        <td>홍길동</td>
+                                        <td>18-10-15</td>
+                                        <td>58</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="h2">table Type D</p>
+                            <div class="type_view">
+                                <div class="fake-table">
+                                    <div class="col-area">
+                                        <div class="col-group">
+                                            <div class="col th">연수원</div>
+                                            <div class="col td">속초 수련</div>
+                                        </div>
+                                        <div class="col-group">
+                                            <div class="col th">이용일</div>
+                                            <div class="col td">2018-09-07 ~ 2018-09-08 (2박)</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-area">
+                                        <div class="col-group">
+                                            <div class="col th">이용객실</div>
+                                            <div class="col td">C형 (37.28㎡ / 최대 4인)</div>
+                                        </div>
+                                        <div class="col-group">
+                                            <div class="col th">차감포인트</div>
+                                            <div class="col td">20point(성수기)</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-area section">
+                                        <div class="col-group">
+                                            <div class="col th">예약자 휴대폰 번호</div>
+                                            <div class="col td">010-1234-5678</div>
+                                        </div>
+                                        <div class="col-group">
+                                            <div class="col th">방문자 휴대폰 번호</div>
+                                            <div class="col td"><input type="text"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-area">
+                                        <div class="col-group full">
+                                            <div class="col th">인원</div>
+                                            <div class="col td"><input type="text"><span class="point-col3 m_block">(기입하신 인원수는 예약 내용 혹은 방배정과는 연관이 없으며, 단순 입실 확인용입니다.)</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="h2">Paging</p>
+                            <div class="type_view">
+                                <div class="paging">
+                                    <a href="#" title="처음" class="ico_fromb pprev"></a>
+                                    <a href="#" title="이전" class="ico_fromb prev"></a>
+                                    <a href="#">1</a>
+                                    <a href="#" class="active">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#" title="다음" class="ico_fromb next"></a>
+                                    <a href="#" title="마지막" class="ico_fromb nnext"></a>
+                                </div>
+                            </div>
+                            <p class="h2">이전/다음글</p>
+                            <p class="sbt">내용이 있는 경우</p>
+                            <div class="type_view">
+                                <div class="prenex_wrap">
+                                    <ul>
+                                        <li class="prev">
+                                            <span class="title ico_coma prev_icon">이전글</span>
+                                            <a href="#;" class="tover">[당첨자발표] 우리아이사랑기획전 당첨자 발표 우리아이사랑기획전 당첨자 발표 우리아이사랑기획전 당첨자 발표 우리아이사랑기획전 당첨자 발표</a>
+                                            <span class="date">2017-05-11</span>
+                                        </li>
+                                        <li class="next">
+                                            <span class="title ico_coma next_icon">다음글</span>
+                                            <a href="#;" class="tover">[공지] 대상통합회원 개인정보 취급방침 수탁사 변경 안내 취급방침 수탁사 변경 안내</a>
+                                            <span class="date">2017-05-11</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="sbt">내용이 없는 경우</p>
+                            <div class="type_view">
+                                <div class="prenex_wrap">
+                                    <ul>
+                                        <li class="prev">
+                                            <span class="title ico_coma prev_icon">이전글</span>
+                                            <span class="tover">이전글이 없습니다.</span>
+                                        </li>
+                                        <li class="next">
+                                            <span class="title ico_coma next_icon">다음글</span>
+                                            <span class="tover">다음글이 없습니다.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="sbt">style backup</p>
+                            <div class="type_view">
+                                <div class="pn_wrap">
+                                    <ul>
+                                        <li class="prev_wrap">
+                                            <a href="#;" title="이전글" class="ico_comb prev_btn btn_btype01 btn_ppos"></a>
+                                            <p class="c_title">
+                                                <span class="tover">[당첨자발표] 우리아이사랑기획전 당첨자 발표 우리아이사랑기획전 당첨자 발표</span>
+                                                <span class="date">2017.05.11</span>
+                                            </p>
+                                        </li>
+                                        <li class="next_wrap">
+                                            <a href="#;" title="다음글" class="ico_comb next_btn btn_btype01 btn_npos"></a>
+                                            <p class="c_title">
+                                                <span class="tover">[공지] 대상통합회원 개인정보 취급방침 수탁사 변경 안내 취급방침 수탁사 변경 안내</span>
+                                                <span class="date">2017.05.13</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="group07" class="group_wrap">
+                        <p class="h1">UI</p>
+                        <div class="box_wrap">
+                            <p class="h2">Breadcrumb</p>
+                            <div class="type_view">
+                                <div class="breadcrumb">
+                                    <span class="breadcrumb-item">홈</span>
+                                    <span class="breadcrumb-item">온라인</span>
+                                    <span class="breadcrumb-item">예약신청</span>
+                                </div>
+                            </div>
+                            <p class="h2">result</p>
+                            <div class="type_view">
+                                <div class="result-box">
+                                    <p>총 <em class="point-col1">2개</em>의 검색결과가 있습니다.</p>
+                                </div>
+                            </div>
+                            <!--<p class="h2">Tab</p>
+                            <div class="type_view">
+                                <div class="tab-area">
+                                    <ul class="tab-type_a">
+                                        <li><button type="button" class="active">속초연수원</button></li>
+                                        <li><button type="button">수안보연수원</button></li>
+                                        <li><button type="button">서천연수원</button></li>
+                                    </ul>
+                                </div>
+                            </div>-->
+                            <p class="h2">검색</p>
+                            <div class="type_view">
+                                <div class="sh-wrap">
+                                    <form action="">
+                                        <fieldset>
+                                            <legend>검색</legend>
+                                            <div class="sh-box">
+                                                <div class="sh-item-from">
+                                                    <label for="" class="sh-item-title">연수원 선택</label>
+                                                </div>
+                                                <div class="sh-item-from">
+                                                    <label for="" class="sh-item-title">체크인<span class="sub-t">IN</span></label>
+                                                </div>
+                                                <div class="sh-item-from small">
+                                                    <label for="" class="sh-item-title">숙박일</label>
+                                                </div>
+                                                <div class="sh-item-from">
+                                                    <label for="" class="sh-item-title">체크아웃<span class="sub-t">OUT</span></label>
+                                                </div>
+                                                <div class="sh-item-from small">
+                                                    <label for="" class="sh-item-title">인원</label>
+                                                </div>
+                                                <div class="sh-item-btn">
+                                                    <button type="button" class="sh-btn"><span>srarch</span>검색</button>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <p class="h2">accordion</p>
+                            <div class="type_view">
+                                <div class="accordion_list">
+                                    <dl>
+                                        <dt><a href="#;" class="ico_cua open">인천공항 / 김포공항</a></dt>
+                                        <dd>
+                                            <table class="tb_list02">
+                                                <caption>인천공항 / 김포공항 출국시간 및 구매마감시간</caption>
+                                                <colgroup>
+                                                    <col style="width:50%">
+                                                    <col style="width:50%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">출국시간</th>
+                                                        <th scope="col">구매마감시간</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>당일 03:00 ~ 14:59 출국</td>
+                                                        <td>당일 주문 불가능 (전일 오후 08:50까지 주문가능)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>당일 15:00 ~ 16:59 출국</td>
+                                                        <td>당일 오전 10:30까지 주문 가능 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>당일 17:00 ~ 18:59 출국</td>
+                                                        <td>당일 오전 12:30까지 주문 가능 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>당일 19:00 ~ 23:59 출국</td>
+                                                        <td>당일 오후 02:30까지 주문 가능 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>익일 00:00 ~ 02:59 출국</td>
+                                                        <td>당일 오후 02:30까지 주문 가능 </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                        <dt><a href="#;" class="ico_cua open">김해공항</a></dt>
+                                        <dd>
+                                            <table class="tb_list02">
+                                                <caption>김해공항 출국시간 및 구매마감시간</caption>
+                                                <colgroup>
+                                                    <col style="width:50%">
+                                                    <col style="width:50%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">출국시간</th>
+                                                        <th scope="col">구매마감시간</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>당일 03:00 ~ 14:59 출국</td>
+                                                        <td>당일 주문 불가능 (전일 오후 08:50까지 주문가능)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>당일 15:00 ~ 16:59 출국</td>
+                                                        <td>당일 오전 10:30까지 주문 가능 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>당일 17:00 ~ 18:59 출국</td>
+                                                        <td>당일 오전 12:30까지 주문 가능 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>당일 19:00 ~ 23:59 출국</td>
+                                                        <td>당일 오후 02:30까지 주문 가능 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>익일 00:00 ~ 02:59 출국</td>
+                                                        <td>당일 오후 02:30까지 주문 가능 </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                        <dt><a href="#;" class="ico_cua open">제주공항</a></dt>
+                                        <dd>
+                                            <table class="tb_list02">
+                                                <caption>제주공항 출국시간 및 구매마감시간</caption>
+                                                <colgroup>
+                                                    <col style="width:50%">
+                                                    <col style="width:50%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">출국시간</th>
+                                                        <th scope="col">구매마감시간</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>당일 03:00 ~ 14:59 출국</td>
+                                                        <td>당일 주문 불가능 (전일 오후 08:50까지 주문가능)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>당일 15:00 ~ 16:59 출국</td>
+                                                        <td>당일 오전 10:30까지 주문 가능 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>당일 17:00 ~ 18:59 출국</td>
+                                                        <td>당일 오전 12:30까지 주문 가능 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>당일 19:00 ~ 23:59 출국</td>
+                                                        <td>당일 오후 02:30까지 주문 가능 </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>익일 00:00 ~ 02:59 출국</td>
+                                                        <td>당일 오후 02:30까지 주문 가능 </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <p class="h2">유의사항</p>
+                            <div class="type_view">
+                                <div class="attention_wrap">
+                                    <p class="ico_comb attention">유의사항</p>
+                                    <ul class="dot_list">
+                                        <li>출국 당일 각 공항 및 부두의 현대면세점 인도장에서 교환권, 여권, 항공티켓을 제시해 주시면 본인 확인 후 상품을 인도받으실 수 있습니다. <br>(인터넷 면세점 구매의 경우 교환권을 출력하여 지참해주시길 바랍니다.)</li>
+                                        <li>구입하신 면세물품 수령은 출국 시 출국보세구역(공항 및 항만) 인도장에서만 가능하며, 입국 시에는 수령 불가합니다.</li>
+                                        <li>상품 수령 시 구입 물품의 수량과 품명을 즉시 확인하시고 인수란에 서명해 주시기 바랍니다.</li>
+                                        <li>출국 후의 물품에 대한 책임을 지지 않습니다. (만약 이상이 있는 경우에는 인도장 직원에게 바로 통보하여 주시기 바랍니다.)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnTop"><a href="#;">top</a></div>
+				
+
+	
+				<!-- //content ---------------------------------------------------------------------------------------------- -->
+
+			</div>
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+			console.log('page');
+
+            $('.btnTop').click(function(){
+                $('html, body').animate({scrollTop : 0},300);
+            });
+
+            redrawDotNav();
+            /* Scroll event handler */
+            $(window).bind('scroll',function(e){
+                redrawDotNav();
+            });
+
+            /* Next/prev and primary nav btn click handlers */
+            $('.tab_nav a.p01').click(function(){
+                $('html, body').animate({
+                    scrollTop:0
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p02').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group02').offset().top
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p03').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group03').offset().top
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p04').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group04').offset().top
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p05').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group05').offset().top
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p06').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group06').offset().top
+                }, 300);
+                return false;
+            });
+            $('.tab_nav a.p07').click(function(){
+                $('html, body').animate({
+                    scrollTop:$('#group07').offset().top
+                }, 300);
+                return false;
+            });
+
+            //timepicker/
+            $('.timepicker').timepicker({
+                timeFormat: 'h:mm p',
+                interval: 30,
+                minTime: '10',
+                //maxTime: '6:00pm',
+                //defaultTime: '11',
+                //startTime: '10:00',
+                dynamic: false,
+                dropdown: true,
+                scrollbar: true
+            });
+
+            /* Set navigation dots to an active state as the user scrolls */
+            function redrawDotNav(){
+                var section1Top =  0;
+                // The top of each section is offset by half the distance to the previous section.
+                var section2Top =  $('#group02').offset().top - (($('#group03').offset().top - $('#group02').offset().top) / 4);
+                var section3Top =  $('#group03').offset().top - (($('#group04').offset().top - $('#group03').offset().top) / 4);
+                var section4Top =  $('#group04').offset().top - (($('#group05').offset().top - $('#group04').offset().top) / 4);
+                var section5Top =  $('#group05').offset().top - (($('#group06').offset().top - $('#group05').offset().top) / 4);
+                var section6Top =  $('#group06').offset().top - (($('#group07').offset().top - $('#group06').offset().top) / 12);
+                var section7Top =  $('#group07').offset().top - (($(document).height() - $('#group07').offset().top) / 4);;
+                $('.tab_nav a').removeClass('active');
+                $('.product_section').removeClass('onbg');
+                if($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top){
+                    $('.tab_nav a.p01').addClass('active');
+                } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
+                    $('.tab_nav a.p02').addClass('active');
+                } else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
+                    $('.tab_nav a.p03').addClass('active');
+                } else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
+                    $('.tab_nav a.p04').addClass('active');
+                } else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){
+                    $('.tab_nav a.p05').addClass('active');
+                } else if ($(document).scrollTop() >= section6Top && $(document).scrollTop() < section7Top){
+                    $('.tab_nav a.p06').addClass('active');
+                } else if ($(document).scrollTop() >= section7Top){
+                    $('.tab_nav a.p07').addClass('active');
+                }
+            }
+        });
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

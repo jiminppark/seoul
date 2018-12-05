@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+    
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+    <title>찾아오시는 길 | 서울시 연수원</title>
+
+	<link rel="apple-touch-icon" href="../../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../../resources/img/common/ico_favicon.ico"> 
+
+	<link rel="stylesheet" href="../../resources/css/ui.base.css">
+
+	<script src="../../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../../resources/js/lib/jquery-ui.min.js"></script>
+	<script src="../../resources/js/lib/jquery.smoothwheel.js"></script>
+    <script src="../../resources/js/lib/owl.carousel.js"></script>
+
+    <script src="../../resources/js/ui.plugins.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+    <script src="../../resources/js/ui.page.js"></script>
+
+</head>
+
+<body>
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-layer" id="baseLayer"></div>
+	<div class="base-wrap pop" id="baseWrap">
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content" id="baseContent">
+
+				<!-- content ---------------------------------------------------------------------------------------------- -->
+				
+				<div class="contents-area">
+					<!-- S : title area -->
+					<div class="type_view">
+						<div class="title-box">
+							<h3 class="h-type_a">찾아오시는 길</h3>
+						</div>
+					</div>
+					<!-- E : title area -->
+
+					<!-- S : view area -->
+					<div class="sub-linlk-wrap mgt-m">
+						<ul class="sub-linlk">
+							<li><a href="login_sokco_fdrod.html" class="active">속초연수원</a></li>
+							<li><a href="login_seoch_fdrod.html">서천연수원</a></li>
+							<li><a href="login_suabo_fdrod.html">수안보연수원</a></li>
+						</ul>
+					</div>
+					<div class="map-area mgt-m">
+						구글맵 API 영역
+					</div>
+					<div class="traffic-area mgt-ms">
+						<div class="traffic-item">
+							<h4 class="h-type_g"><i class="ico_common ico-traffic01"></i>자가용 이용시</h4>
+							<h5 class="h-type_h mgt-xs">서울방면에서 오실때 </h5>
+							<ul class="mgt-xs">
+								<li>1. 서울 > 팔당 > 양평 > 홍천 > 인제 > 원통 > 미시령터널 > 공무원수련원</li>
+								<li>2. 서울 > 경춘고속도로 > 동홍천IC > 인제 > 미시령터널 > 공무원수련원</li>
+								<li>3. 서울 > 경춘고속도로 > 동홍천IC > 양양고속도로 > 공무원수련원</li>
+							</ul>
+						</div>
+						<div class="traffic-item">
+							<h4 class="h-type_g"><i class="ico_common ico-traffic02"></i>대중교통 이용시</h4>
+							<h5 class="h-type_h mgt-xs">버스</h5>
+							<ul class="mgt-xs">
+								<li>1. 속초 > 서울(강남) / 소요시간: 2시간 40분</li>
+								<li>2. 속초 > 서울(동서울) / 소요시간: 2시간 30분</li>
+								<li>3. 속초 > 인천 / 소요시간: 3시간 30분</li>
+								<li>4. 속초 > 양양고속도로-동서울 / 소요시간: 2시간</li>
+								<li>5. 속초 > 한계령-동서울 / 소요시간: 3시간 30분</li>
+							</ul>
+						</div>
+					</div>
+					<h4 class="h-type_g mgt-ms">대중교통 정보</h4>
+					<div class="ui-tab tab-type_a al_b" id="tourinfoTab">
+						<div class="ui-tab-btns">
+							<button type="button" class="ui-tab-btn"><i>고속버스</i></button>
+							<button type="button" class="ui-tab-btn"><i>시외버스</i></button>
+						</div>
+						<div class="ui-tab-pnls">
+							<!-- S : 고속버스 -->
+							<section class="ui-tab-pnl">
+								<div class="sh-tb-area">
+									<table>
+										<colgroup>
+											<col class="cols-w3">
+											<col class="col-auto">
+										</colgroup>
+										<tbody>
+										<tr>
+											<th scope="row">출발일</th>
+											<td>
+												<div class="form-row type-small">
+													<div class="form-col">
+														<!--<span class="datepicker-box"><input type="text" id="" name="" value="" placeholder="날짜선택" class="inp-date"></span>-->
+														<div class="ui-select">
+															<select class="sel_type" id="selChoice01">
+																<option selected="selected">선택</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">버스등급</th>
+											<td>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="bus01">
+													<label for="bus01">전체</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="bus02">
+													<label for="bus02">우등</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="bus03">
+													<label for="bus03">고속</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="bus04">
+													<label for="bus04">심야우등</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="bus05">
+													<label for="bus05">심야고속</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="bus06">
+													<label for="bus06">일반</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="bus07">
+													<label for="bus07">일반심야</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="bus08">
+													<label for="bus08">프리미엄</label>
+												</span>
+												<span class="checkbox">
+													<input type="checkbox" name="" id="bus09">
+													<label for="bus09">심야프리미엄</label>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">출발지</th>
+											<td>
+												<div class="form-row">
+													<div class="form-col">
+														<div class="ui-select">
+															<select class="sel_type" id="selChoice02">
+																<option selected="selected">선택</option>
+																<option>서울특별시</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-col">
+														<div class="ui-select">
+															<select class="sel_type" id="selChoice03">
+																<option selected="selected">선택</option>
+																<option>서울경부</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">도착지</th>
+											<td>
+												<div class="form-row">
+													<div class="form-col">
+														<div class="ui-select">
+															<select class="sel_type" id="selChoice04">
+																<option selected="selected">선택</option>
+																<option>강원도</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-col">
+														<div class="ui-select">
+															<select class="sel_type" id="selChoice05">
+																<option selected="selected">선택</option>
+																<option>속초</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+									<button type="button" class="btn-basic3">조회</button>
+								</div>
+								<p class="fsize-m mgt-s">2018년 10월 12일 <span class="point-col1">[서울특별시 → 속초]</span> 조회결과</p>
+								<table class="tb-type_c mgt-xs">
+									<caption></caption>
+									<thead>
+									<tr>
+										<th scope="col">버스등급</th>
+										<th scope="col">출발시간</th>
+										<th scope="col">도착시간</th>
+										<th scope="col">출발지</th>
+										<th scope="col">도착지</th>
+										<th scope="col">운임</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>우등고속</td>
+										<td>11:30</td>
+										<td>14:30</td>
+										<td>서울고속터미널</td>
+										<td>속초고속터미널</td>
+										<td>17,900</td>
+									</tr>
+									<tr>
+										<td>우등고속</td>
+										<td>11:30</td>
+										<td>14:30</td>
+										<td>서울고속터미널</td>
+										<td>속초고속터미널</td>
+										<td>17,900</td>
+									</tr>
+									<tr>
+										<td>우등고속</td>
+										<td>11:30</td>
+										<td>14:30</td>
+										<td>서울고속터미널</td>
+										<td>속초고속터미널</td>
+										<td>17,900</td>
+									</tr>
+									<tr>
+										<td>우등고속</td>
+										<td>11:30</td>
+										<td>14:30</td>
+										<td>서울고속터미널</td>
+										<td>속초고속터미널</td>
+										<td>17,900</td>
+									</tr>
+									<tr>
+										<td>우등고속</td>
+										<td>11:30</td>
+										<td>14:30</td>
+										<td>서울고속터미널</td>
+										<td>속초고속터미널</td>
+										<td>17,900</td>
+									</tr>
+									<tr>
+										<td>우등고속</td>
+										<td>11:30</td>
+										<td>14:30</td>
+										<td>서울고속터미널</td>
+										<td>속초고속터미널</td>
+										<td>17,900</td>
+									</tr>
+									<tr>
+										<td>우등고속</td>
+										<td>11:30</td>
+										<td>14:30</td>
+										<td>서울고속터미널</td>
+										<td>속초고속터미널</td>
+										<td>17,900</td>
+									</tr>
+									<tr>
+										<td>우등고속</td>
+										<td>11:30</td>
+										<td>14:30</td>
+										<td>서울고속터미널</td>
+										<td>속초고속터미널</td>
+										<td>17,900</td>
+									</tr>
+									<tr>
+										<td>우등고속</td>
+										<td>11:30</td>
+										<td>14:30</td>
+										<td>서울고속터미널</td>
+										<td>속초고속터미널</td>
+										<td>17,900</td>
+									</tr>
+									<tr>
+										<td>우등고속</td>
+										<td>11:30</td>
+										<td>14:30</td>
+										<td>서울고속터미널</td>
+										<td>속초고속터미널</td>
+										<td>17,900</td>
+									</tr>
+									</tbody>
+								</table>
+
+								<div class="paging-area">
+									<div class="paging">
+										<a href="#" title="처음" class="ico_fromb pprev"></a>
+										<a href="#" title="이전" class="ico_fromb prev"></a>
+										<a href="#">1</a>
+										<a href="#" class="active">2</a>
+										<a href="#">3</a>
+										<a href="#">4</a>
+										<a href="#">5</a>
+										<a href="#" title="다음" class="ico_fromb next"></a>
+										<a href="#" title="마지막" class="ico_fromb nnext"></a>
+									</div>
+								</div>
+								<p class="text-indent_a mgt-ms">※ 본 정보는 코버스의 사정에 따라 변경 될 수 있습니다. 최신정보 확인은 고속버스통합예매 홈페이지(<a href="http://www.kobus.co.kr" target="_blank" class="link-type_b">www.kobus.co.kr</a>)에서 확인하시기 바랍니다.</p>
+							</section>
+							<!-- E : 고속버스 -->
+							<!-- S : 시외버스 -->
+							<section class="ui-tab-pnl">
+								<p class="fsize-m"><span class="point-col1">[서울특별시 → 속초]</span> 버스 시간표</p>
+								<table class="tb-type_c mgt-xs">
+									<caption></caption>
+									<thead>
+									<tr>
+										<th scope="col">출발시간</th>
+										<th scope="col">출발지</th>
+										<th scope="col">도착지</th>
+										<th scope="col">버스회사</th>
+										<th scope="col">버스등급</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>6:05</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(직통)</td>
+									</tr>
+									<tr>
+										<td>6:30</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>6:31</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>동해상사고속㈜</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>6:35</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>7:05</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(직통)</td>
+									</tr>
+									<tr>
+										<td>7:10</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>강원흥업㈜</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>7:30</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>7:35</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>7:40</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>동해상사고속㈜</td>
+										<td>반(경유)</td>
+									</tr>
+									<tr>
+										<td>8:05</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>8:15</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>강원흥업㈜</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>8:29</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>8:30</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>8:59</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>9:00</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>동해상사고속㈜</td>
+										<td>시외우등(경유)</td>
+									</tr>
+									<tr>
+										<td>9:20</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>9:29</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>9:59</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>10:00</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>10:10</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>동해상사고속㈜</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>10:29</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>10:45</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>11:00</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(직통)</td>
+									</tr>
+									<tr>
+										<td>11:20</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>동해상사고속㈜</td>
+										<td>시외우등(경유)</td>
+									</tr>
+									<tr>
+										<td>11:29</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>11:59</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>12:29</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>12:30</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>동해상사고속㈜</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>12:59</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>13:29</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(직통)</td>
+									</tr>
+									<tr>
+										<td>13:30</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>동해상사고속㈜</td>
+										<td>시외우등(경유)</td>
+									</tr>
+									<tr>
+										<td>13:59</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>14:00</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>14:15</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>강원흥업㈜</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>14:29</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>14:59</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>15:20</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>15:25</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>강원흥업㈜</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>15:29</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>16:00</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>16:01</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>동해상사고속㈜</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>16:29</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>16:35</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>강원흥업㈜</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>16:59</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(직통)</td>
+									</tr>
+									<tr>
+										<td>17:00</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>동해상사고속㈜</td>
+										<td>시외우등(경유)</td>
+									</tr>
+									<tr>
+										<td>17:10</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>17:30</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>18:00</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>18:20</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>동해상사고속㈜</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>18:30</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>18:40</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(경유)</td>
+									</tr>
+									<tr>
+										<td>19:00</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>19:30</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>일반(직통)</td>
+									</tr>
+									<tr>
+										<td>20:00</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>20:30</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>21:00</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>시외우등(직통)</td>
+									</tr>
+									<tr>
+										<td>22:00</td>
+										<td>동서울(K)</td>
+										<td>속초</td>
+										<td>㈜금강고속</td>
+										<td>심야우등(직통)</td>
+									</tr>
+									</tbody>
+								</table>
+							</section>
+							<!-- E : 시외버스 -->
+						</div>
+					</div>
+					<!-- E : view area -->
+				</div>
+	
+				<!-- //content ---------------------------------------------------------------------------------------------- -->
+
+			</div>
+		</main>
+	</div>
+
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			console.log('page');
+			$plugins.page.menuID = 'M03_01';
+
+            //page script
+			$plugins.page.tour();
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

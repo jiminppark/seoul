@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>서울시 연수원 UI-Guide</title>
+
+	<link rel="apple-touch-icon" href="../../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../../resources/img/common/ico_favicon.ico">
+
+	<link rel="stylesheet" href="../../resources/css/ui.base.css">
+
+	<script src="../../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../../resources/js/lib/jquery-ui.min.js"></script>
+	<script src="../../resources/js/lib/jquery.smoothwheel.js"></script>
+	<script src="../../resources/js/lib/owl.carousel.js"></script>
+
+	<script src="../../resources/js/ui.plugins.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>
+	<script src="../../resources/js/ui.page.js"></script>
+
+
+<style>
+	body{background:linear-gradient(to top right, #ffeff0 0%, #dcf6e7 100%);
+		background:#ffeff0; /* Old browsers */
+		background:-moz-linear-gradient(45deg, #ffeff0 1%, #dcf6e7 100%); /* FF3.6-15 */
+		background:-webkit-linear-gradient(45deg, #ffeff0 1%,#dcf6e7 100%); /* Chrome10-25,Safari5.1-6 */
+		background:linear-gradient(45deg, #ffeff0 1%,#dcf6e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeff0', endColorstr='#dcf6e7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+	.btnTop {position:fixed;z-index:50;overflow:hidden;width:30px;height:30px;right:10px;bottom:10px}
+	.btnTop a {display:block;width:30px;height:30px;background:url("../../btn_top.png") no-repeat 0 0;text-indent:-9999em;opacity:.7}
+	.btnTop a:hover {opacity:1}
+	.list_box_wrap {padding:0 20px 20px 20px;min-width:1000px}
+	.tabs {background-color:#309df1;position:fixed;top:0;right:0;left:0;z-index:49}
+	.tabs .logo {position:absolute;width:150px;top:0;left:0;height:50px;line-height:50px;color:#fff;font-weight:bold;text-align:center;background-color:#000;font-size:16px}
+	.tabs ul {overflow:hidden;margin-left:150px}
+	.tabs ul li {float:left;width:14.25%}
+	.tabs ul li a {display:block;text-align:center;height:50px;line-height:50px;font-weight:bold;color:#fff;font-size:13px;position:relative;font-family:'verdana'}
+	.tabs ul li a.active {background-color:#cf214d}
+	.tabs ul li a:after {content:'';position:absolute;top:0;right:0;bottom:0;width:1px;background-color:rgba(255,255,255,.3)}
+	.tabs ul li:last-child {width:14.5%}
+	.tabs ul li:last-child a:after{display:none}
+
+	.h1 {font-weight:bold;font-size:18px;color:#000;margin-bottom:10px;font-family:'verdana';padding-top:60px}
+	.h2 {background-color:#e0f2e8;margin:0 -20px;height:30px;line-height:30px;padding:0 20px;font-weight:bold;margin-bottom:10px}
+	.box_wrap {border:1px solid #ddd;padding:0 20px 0 20px;background-color:#fff}
+	.type_view {padding-bottom:20px;max-width:1280px}
+	.type_view .sbt {margin-bottom:5px;color:#333}
+	.type_view .sbt ~ .sbt {margin-top:10px}
+	.type_view.btn_view button {margin-right:20px}
+	.type_view > .checkbox, .type_view > .radio {margin-right:15px}
+	@media (max-width:768px) {
+		.tabs ul {margin-left:0}
+		.tabs .logo {display:none}
+		.list_box_wrap {min-width:1px}
+	}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.btnTop').click(function(){
+		$('html, body').animate({scrollTop : 0},300);
+	});
+
+	redrawDotNav();
+	/* Scroll event handler */
+	$(window).bind('scroll',function(e){
+		redrawDotNav();
+	});
+
+	/* Next/prev and primary nav btn click handlers */
+	$('.tab_nav a.p01').click(function(){
+		$('html, body').animate({
+			scrollTop:0
+		}, 300);
+		return false;
+	});
+	$('.tab_nav a.p02').click(function(){
+		$('html, body').animate({
+			scrollTop:$('#group02').offset().top
+		}, 300);
+		return false;
+	});
+	$('.tab_nav a.p03').click(function(){
+		$('html, body').animate({
+			scrollTop:$('#group03').offset().top
+		}, 300);
+		return false;
+	});
+	$('.tab_nav a.p04').click(function(){
+		$('html, body').animate({
+			scrollTop:$('#group04').offset().top
+		}, 300);
+		return false;
+	});
+	$('.tab_nav a.p05').click(function(){
+		$('html, body').animate({
+			scrollTop:$('#group05').offset().top
+		}, 300);
+		return false;
+	});
+	$('.tab_nav a.p06').click(function(){
+		$('html, body').animate({
+			scrollTop:$('#group06').offset().top
+		}, 300);
+		return false;
+	});
+	$('.tab_nav a.p07').click(function(){
+		$('html, body').animate({
+			scrollTop:$('#group07').offset().top
+		}, 300);
+		return false;
+	});
+
+	//timepicker/
+	$('.timepicker').timepicker({
+		timeFormat: 'h:mm p',
+		interval: 30,
+		minTime: '10',
+		//maxTime: '6:00pm',
+		//defaultTime: '11',
+		//startTime: '10:00',
+		dynamic: false,
+		dropdown: true,
+		scrollbar: true
+	});
+});
+
+/* Set navigation dots to an active state as the user scrolls */
+function redrawDotNav(){
+	var section1Top =  0;
+	// The top of each section is offset by half the distance to the previous section.
+	var section2Top =  $('#group02').offset().top - (($('#group03').offset().top - $('#group02').offset().top) / 4);
+	var section3Top =  $('#group03').offset().top - (($('#group04').offset().top - $('#group03').offset().top) / 4);
+	var section4Top =  $('#group04').offset().top - (($('#group05').offset().top - $('#group04').offset().top) / 4);
+	var section5Top =  $('#group05').offset().top - (($('#group06').offset().top - $('#group05').offset().top) / 4);
+	var section6Top =  $('#group06').offset().top - (($('#group07').offset().top - $('#group06').offset().top) / 12);
+	var section7Top =  $('#group07').offset().top - (($(document).height() - $('#group07').offset().top) / 4);;
+	$('.tab_nav a').removeClass('active');
+	$('.product_section').removeClass('onbg');
+	if($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top){
+		$('.tab_nav a.p01').addClass('active');
+	} else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
+		$('.tab_nav a.p02').addClass('active');
+	} else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
+		$('.tab_nav a.p03').addClass('active');
+	} else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){
+		$('.tab_nav a.p04').addClass('active');
+	} else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){
+		$('.tab_nav a.p05').addClass('active');
+	} else if ($(document).scrollTop() >= section6Top && $(document).scrollTop() < section7Top){
+		$('.tab_nav a.p06').addClass('active');
+	} else if ($(document).scrollTop() >= section7Top){
+		$('.tab_nav a.p07').addClass('active');
+	}
+}
+</script>
+</head>
+<body>
+<div class="list_box_wrap">
+	<div class="tabs">
+		<p class="logo">서울시 연수원</p>
+		<ul class="tab_nav">
+			<li><a href="#group01" class="p01">H Tag</a></li>
+			<li><a href="#group02" class="p02">Form Tag</a></li>
+			<li><a href="#group03" class="p03">Text List</a></li>
+			<li><a href="#group04" class="p04">Product List</a></li>
+			<li><a href="#group05" class="p05">Button</a></li>
+			<li><a href="#group06" class="p06">Table</a></li>
+			<li><a href="#group07" class="p07">UI</a></li>
+		</ul>
+	</div>
+	<div id="group01" class="group_wrap">
+		<p class="h1">H Tag &amp; P Tag</p>
+		<div class="box_wrap">
+			<p class="h2">h-type_a</p>
+			<div class="type_view">
+				<h1 class="h-type_a">타이틀</h1>
+				<div class="title-box">
+					<h2 class="h-type_a">예약신청</h2>
+					<div class="breadcrumb">
+						<span class="breadcrumb-item">홈</span>
+						<span class="breadcrumb-item">온라인</span>
+						<span class="breadcrumb-item">예약신청</span>
+					</div>
+				</div>
+			</div>
+			<p class="h2">h-type_b</p>
+			<div class="type_view">
+				<h2 class="h-type_b">큰 단락제목</h2>
+			</div>
+			<p class="h2">h-type_c</p>
+			<div class="type_view">
+				<h3 class="h-type_c">작은 단락제목</h3>
+			</div>
+			<p class="h2">h-type_d</p>
+			<div class="type_view">
+				<h3 class="h-type_d">강조 타이틀</h3>
+			</div>
+			<p class="h2">txt-type_a</p>
+			<div class="type_view">
+				<p class="txt-type_a">본문내용(큰사이즈)</p>
+			</div>
+			<p class="h2">txt-type_b</p>
+			<div class="type_view">
+				<p class="txt-type_b">본문내용(작은사이즈)</p>
+			</div>
+			<p class="h2">point</p>
+			<div class="type_view">
+				<p class="txt-type_b point">본문강조</p>
+			</div>
+			<p class="h2">text-indent</p>
+			<div class="type_view">
+				<p class="text-indent_a">※ 안내문구</p>
+				<p class="text-indent_a point-col3">※ 강조문구</p>
+			</div>
+			<p class="h2">point color</p>
+			<div class="type_view">
+				<p class="point-col1">point-col1</p>
+				<p class="point-col2">point-col2</p>
+				<p class="point-col3">point-col3</p>
+			</div>
+		</div>
+	</div>
+	<div id="group02" class="group_wrap">
+		<p class="h1">Form Tag</p>
+		<div class="box_wrap">
+			<p class="h2">Input</p>
+			<div class="type_view">
+				<p class="sbt">basic type</p>
+				<input type="text" value="입력값">
+				<p class="sbt">basic placeholder type</p>
+				<input type="text" value="" placeholder="입력값">
+				<p class="sbt">basic disabled type</p>
+				<input type="text" value="입력값" disabled>
+				<p class="sbt">datepicker</p>
+				<span class="datepicker-box"><input type="text" id="" name="" value="" placeholder="날짜선택" class="inp-date"></span>
+			</div>
+			<p class="h2">Select</p>
+			<div class="type_view">
+				<p class="sbt">small size type</p>
+				<div class="ui-select sel_small">
+					<select class="sel_type" id="selectID_1">
+						<option selected="selected">Slower</option>
+						<option>Slow</option>
+						<option >Medium</option>
+						<option>Fast</option>
+						<option>Faster</option>
+					</select>
+				</div>
+				<p class="sbt">basic type</p>
+				<div class="ui-select">
+					<select class="sel_type" id="selectID_2">
+						<option selected="selected">Slower</option>
+						<option>Slow</option>
+						<option >Medium</option>
+						<option>Fast</option>
+						<option>Faster</option>
+					</select>
+				</div>
+				<p class="sbt">basic disabled</p>
+				<div class="ui-select">
+					<select class="sel_type" id="selectID_3" disabled>
+						<option selected="selected">Slower</option>
+						<option>Slow</option>
+						<option >Medium</option>
+						<option>Fast</option>
+						<option>Faster</option>
+					</select>
+				</div>
+			</div>
+			<p class="h2">Radio</p>
+			<div class="type_view">
+				<p class="sbt">basic</p>
+				<span class="radio">
+					<input type="radio" name="termType" id="termType1" checked>
+					<label for="termType1">선택</label>
+				</span>
+				<span class="radio">
+					<input type="radio" name="termType" id="termType2">
+					<label for="termType2">미선택</label>
+				</span>
+				<span class="radio">
+					<input type="radio" name="termType02" id="termType3" disabled>
+					<label for="termType3">비활성</label>
+				</span>
+				<span class="radio">
+					<input type="radio" name="termType02" id="termType4" checked disabled>
+					<label for="termType4">선택비활성</label>
+				</span>
+				<p class="sbt">no label</p>
+				<span class="radio no_label">
+					<input type="radio" name="termType02_2" id="termType5">
+					<label for="termType5">선택</label>
+				</span>
+			</div>
+			<p class="h2">Checkbox</p>
+			<div class="type_view">
+				<p class="sbt">basic</p>
+				<span class="checkbox">
+					<input type="checkbox" name="" id="termType9" checked>
+					<label for="termType9">선택</label>
+				</span>
+				<span class="checkbox">
+					<input type="checkbox" name="" id="termType6">
+					<label for="termType6">미선택</label>
+				</span>
+				<span class="checkbox">
+					<input type="checkbox" name="" id="termType7" disabled>
+					<label for="termType7">비활성</label>
+				</span>
+				<span class="checkbox">
+					<input type="checkbox" name="" id="termType8" checked disabled>
+					<label for="termType8">선택비활성</label>
+				</span>
+				<p class="sbt">no label</p>
+				<span class="checkbox no_label">
+					<input type="checkbox" name="" id="termType10">
+					<label for="termType10">선택</label>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div id="group03" class="group_wrap">
+		<p class="h1">Text List</p>
+		<div class="box_wrap" style="min-height:400px">
+			<p class="h2">Dot List</p>
+			<p class="sbt">dot_list(big)</p>
+			<div class="type_view">
+				<ul class="dot_list">
+					<li>안내문구</li>
+					<li>안내문구 안내문구 안내문구</li>
+				</ul>
+			</div>
+			<p class="sbt">dot_list(small)</p>
+			<div class="type_view">
+				<ul class="dot_list small">
+					<li>안내문구</li>
+					<li>안내문구 안내문구 안내문구</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="group04" class="group_wrap">
+		<p class="h1">Product List</p>
+		<div class="box_wrap">
+			<p class="h2">3단</p>
+			<div class="type_view">
+				<div class="box-module_a">
+					<div class="box-item">
+						<div class="img-area"><img src="../../resources/img/temp/room01.jpg" alt=""></div>
+						<div class="info-area">
+							<dl class="dl-type_a">
+								<dt><p class="room-type">A형</p><button type="button" class="btn-basic1 small">상세보기</button></dt>
+								<dd>29.28m<sup>2</sup>/최대 7인<br>성수기 비수기</dd>
+							</dl>
+						</div>
+						<div class="check-area">
+							<span class="radio big">
+								<input type="radio" name="termType000" id="termType001">
+								<label for="termType001">객실선택하기</label>
+							</span>
+						</div>
+					</div>
+					<div class="box-item">
+						<div class="img-area"><img src="../../resources/img/temp/room02.jpg" alt=""></div>
+						<div class="info-area">
+							<dl class="dl-type_a">
+								<dt><p class="room-type">B형</p><button type="button" class="btn-basic1 small">상세보기</button></dt>
+								<dd>29.28m<sup>2</sup>/최대 7인<br>성수기 비수기</dd>
+							</dl>
+						</div>
+						<div class="check-area">
+							<span class="radio big">
+								<input type="radio" name="termType000" id="termType002">
+								<label for="termType002">객실선택하기</label>
+							</span>
+						</div>
+					</div>
+					<div class="box-item active">
+						<div class="img-area"><img src="../../resources/img/temp/room01.jpg" alt=""></div>
+						<div class="info-area">
+							<dl class="dl-type_a">
+								<dt><p class="room-type">C형</p><button type="button" class="btn-basic1 small">상세보기</button></dt>
+								<dd>29.28m<sup>2</sup>/최대 7인<br>성수기 비수기</dd>
+							</dl>
+						</div>
+						<div class="check-area">
+							<span class="radio big">
+								<input type="radio" name="termType000" id="termType003" checked="checked">
+								<label for="termType003">객실선택하기</label>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="h2">1단</p>
+			<div class="type_view">
+				<div class="box-module_b">
+					<div class="box-item">
+						<div class="img-area"><img src="../../resources/img/temp/room03.jpg" alt=""></div>
+						<div class="info-area">
+							<div class="room-type-area">
+								<p class="room-type">A타입(60M<sup>2</sup>)</p>
+								<button type="button" class="btn-basic1">예약하기</button>
+							</div>
+							<div class="room-info">
+								<div class="room-info-group">
+									<dl class="dl-type_b">
+										<dt class="dot-item">객실전망 :</dt>
+										<dd>북쪽 방향</dd>
+										<dt class="dot-item">객실타입 :</dt>
+										<dd>침대방 1개, 온돌방 1개, 화장실 1개</dd>
+										<dt class="dot-item">수용인원 :</dt>
+										<dd>성인 6인</dd>
+									</dl>
+									<dl class="dl-type_b">
+										<dt class="dot-item">포인트 :</dt>
+										<dd>성수기 20포인트 차감 <br>비수기 10포인트 차감</dd>
+									</dl>
+								</div>
+								<table class="tb-type_d">
+									<caption class="dot-item">비품구성</caption>
+									<colgroup>
+										<col class="cols-w3">
+										<col class="col-auto">
+									</colgroup>
+									<tbody>
+									<tr>
+										<th scope="row">가구류</th>
+										<td>TV받침대/쇼파/식탁/식탁의자/침대매트/침대헤드보드/화장대</td>
+									</tr>
+									<tr>
+										<th scope="row">가전류</th>
+										<td>TV/에어컨/냉장고/전기밥솥/전기쿡탑</td>
+									</tr>
+									<tr>
+										<th scope="row">식기류</th>
+										<td>객실정원에 맞는 식기 일체</td>
+									</tr>
+									<tr>
+										<th scope="row">침구류</th>
+										<td>객실 정원에 맞는 침구류(이불/요/배게)일체</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="box-item">
+						<div class="img-area"><img src="../../resources/img/temp/room04.jpg" alt=""></div>
+						<div class="info-area">
+							<div class="room-type-area">
+								<p class="room-type">B타입(30M<sup>2</sup>)</p>
+								<button type="button" class="btn-basic1">예약하기</button>
+							</div>
+							<div class="room-info">
+								<div class="room-info-group">
+									<dl class="dl-type_b">
+										<dt class="dot-item">객실전망 :</dt>
+										<dd>북쪽 방향</dd>
+										<dt class="dot-item">객실타입 :</dt>
+										<dd>침대방 1개, 온돌방 1개, 화장실 1개</dd>
+										<dt class="dot-item">수용인원 :</dt>
+										<dd>성인 6인</dd>
+									</dl>
+									<dl class="dl-type_b">
+										<dt class="dot-item">포인트 :</dt>
+										<dd>성수기 20포인트 차감 <br>비수기 10포인트 차감</dd>
+									</dl>
+								</div>
+								<table class="tb-type_d">
+									<caption class="dot-item">비품구성</caption>
+									<colgroup>
+										<col class="cols-w3">
+										<col class="col-auto">
+									</colgroup>
+									<tbody>
+									<tr>
+										<th scope="row">가구류</th>
+										<td>TV받침대/쇼파/식탁/식탁의자/침대매트/침대헤드보드/화장대</td>
+									</tr>
+									<tr>
+										<th scope="row">가전류</th>
+										<td>TV/에어컨/냉장고/전기밥솥/전기쿡탑</td>
+									</tr>
+									<tr>
+										<th scope="row">식기류</th>
+										<td>객실정원에 맞는 식기 일체</td>
+									</tr>
+									<tr>
+										<th scope="row">침구류</th>
+										<td>객실 정원에 맞는 침구류(이불/요/배게)일체</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="group05" class="group_wrap">
+		<p class="h1">Button</p>
+		<div class="box_wrap">
+			<p class="h2">Big Button</p>
+			<div class="type_view">
+				<p class="sbt">basic</p>
+				<button type="button" class="btn-basic1 big">확인</button>
+				<button type="button" class="btn-basic2 big">확인</button>
+				<button type="button" class="btn-basic3 big">확인</button>
+				<button type="button" class="btn-basic4 big">확인</button>
+				<button type="button" class="btn-basic5 big">확인</button>
+				<button type="button" class="btn-basic6 big">확인</button>
+				<button type="button" class="btn-basic7 big">확인</button>
+				<p class="sbt">disabled</p>
+				<button type="button" class="btn-basic1 big" disabled>확인</button>
+				<button type="button" class="btn-basic2 big" disabled>확인</button>
+				<button type="button" class="btn-basic3 big" disabled>확인</button>
+				<button type="button" class="btn-basic4 big" disabled>확인</button>
+				<button type="button" class="btn-basic5 big" disabled>확인</button>
+				<button type="button" class="btn-basic6 big" disabled>확인</button>
+				<button type="button" class="btn-basic7 big">확인</button>
+			</div>
+			<p class="h2">Middle Button</p>
+			<div class="type_view">
+				<button type="button" class="btn-basic1">확인</button>
+				<button type="button" class="btn-basic2">확인</button>
+				<button type="button" class="btn-basic3">확인</button>
+				<button type="button" class="btn-basic4">확인</button>
+				<button type="button" class="btn-basic5">확인</button>
+				<button type="button" class="btn-basic6">확인</button>
+				<button type="button" class="btn-basic7">확인</button>
+			</div>
+			<p class="h2">Small Button</p>
+			<div class="type_view">
+				<button type="button" class="btn-basic1 small">확인</button>
+				<button type="button" class="btn-basic2 small">확인</button>
+				<button type="button" class="btn-basic3 small">확인</button>
+				<button type="button" class="btn-basic4 small">확인</button>
+				<button type="button" class="btn-basic5 small">확인</button>
+				<button type="button" class="btn-basic6 small">확인</button>
+				<button type="button" class="btn-basic7 small">확인</button>
+			</div>
+		</div>
+	</div>
+	<div id="group06" class="group_wrap">
+		<p class="h1">Table</p>
+		<div class="box_wrap">
+			<p class="h2">table Type A</p>
+			<div class="type_view">
+				<table class="tb-type_a">
+					<caption></caption>
+					<colgroup>
+						<col style="width:30%">
+						<col style="width:30%">
+						<col style="width:auto">
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col" colspan="3">상단 타이틀</th>
+					</tr>
+					<tr>
+						<th scope="col">상단 타이틀1</th>
+						<th scope="col">상단 타이틀2</th>
+						<th scope="col">상단 타이틀3</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>컨텐츠 1</td>
+						<td>컨텐츠 2</td>
+						<td>컨텐츠 3</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="h2">table Type B</p>
+			<div class="type_view">
+				<table class="tb-type_b">
+					<caption>분실물신고 작성</caption>
+					<colgroup>
+						<col class="cols-w4">
+						<col class="col-auto">
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">연수원</th>
+						<td>
+							<div class="m-full">
+								<div class="ui-select">
+									<select class="sel_type" id="areaChoice001">
+										<option selected="selected">선택</option>
+										<option >통합</option>
+										<option>속초 수련원</option>
+										<option>수안보연수원</option>
+										<option>서천연수원</option>
+									</select>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">이름</th>
+						<td>
+							<input type="text" value="" placeholder="" class="in-w01 m-full">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">연락처</th>
+						<td>
+							<input type="text" value="" placeholder="" class="in-w01 m-full">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">물품명</th>
+						<td>
+							<input type="text" value="" placeholder="" class="in-w100">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">분실일자</th>
+						<td>
+							<span class="datepicker-box in-w01 m-full"><input type="text" name="" value="" placeholder="날짜선택" class="inp-date"></span>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">분실장소</th>
+						<td>
+							<input type="text" value="" placeholder="" class="in-w100">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">물품특징</th>
+						<td>
+							<div class="textarea_wrap mini">
+								<textarea name="" cols="30" rows="10"></textarea>
+							</div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="h2">table Type C</p>
+			<div class="type_view">
+				<table class="tb-type_c">
+					<caption></caption>
+					<colgroup>
+						<col class="cols-w1 only-pc">
+						<col class="cols-auto">
+						<col class="cols-w2 only-pc">
+						<col class="cols-w2">
+						<col class="cols-w2 only-pc">
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col" class="only-pc">NO</th>
+						<th scope="col">제목</th>
+						<th scope="col" class="only-pc">작성자</th>
+						<th scope="col">작성일</th>
+						<th scope="col" class="only-pc">조회수</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="only-pc">4</td>
+						<td class="txt-l"><a href="" class="clamp">제목들어감 제목들어감제목들어감 제목들어감 제목들어감 제목들어감 제목들어감 제목들어감 제목들어감</a><span class="blt-new">N</span></td>
+						<td class="only-pc">홍길동</td>
+						<td>18-10-15</td>
+						<td class="only-pc">58</td>
+					</tr>
+					<tr>
+						<td class="only-pc">3</td>
+						<td class="txt-l"><a href="" class="clamp">제목들어감</a><span class="blt-new">N</span></td>
+						<td class="only-pc">홍길동</td>
+						<td>18-10-15</td>
+						<td class="only-pc">58</td>
+					</tr>
+					<tr>
+						<td class="only-pc">2</td>
+						<td class="txt-l"><a href="" class="clamp">제목들어감</a></td>
+						<td class="only-pc">홍길동</td>
+						<td>18-10-15</td>
+						<td class="only-pc">58</td>
+					</tr>
+					<tr>
+						<td class="only-pc">1</td>
+						<td class="txt-l"><a href="" class="clamp">제목들어감 제목들어감 제목들어감 제목들어감</a></td>
+						<td class="only-pc">홍길동</td>
+						<td>18-10-15</td>
+						<td class="only-pc">58</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="h2">table Type C(모바일에서 thead 없음)</p>
+			<div class="type_view">
+				<table class="tb-type_c not-thead">
+					<caption></caption>
+					<colgroup>
+						<col class="cols-w5 only-pc">
+						<col class="cols-w6">
+						<col class="cols-w7">
+						<col class="cols-auto">
+						<col class="cols-w8">
+						<col class="cols-w8">
+						<col class="cols-w5 only-pc">
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col" class="only-pc">번호</th>
+						<th scope="col">연수원</th>
+						<th scope="col">구분</th>
+						<th scope="col">분실물</th>
+						<th scope="col">등록자</th>
+						<th scope="col">등록일</th>
+						<th scope="col" class="only-pc">조회수</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="only-pc">4</td>
+						<td class="td-t-area">서천</td>
+						<td class="td-t-type blank">분실</td>
+						<td class="td-t-lost block txt-l"><a href="">핸드폰 배터리</a></td>
+						<td class="td-t-person">서천연수원</td>
+						<td class="td-t-day blank">18-10-15</td>
+						<td class="only-pc">58</td>
+					</tr>
+					<tr>
+						<td class="only-pc">3</td>
+						<td class="td-t-area">수안보</td>
+						<td class="td-t-type blank">습득</td>
+						<td class="td-t-lost block txt-l"><a href="">지갑</a><i class="ico_common ico_secret"></i></td>
+						<td class="td-t-person">수안보연수원</td>
+						<td class="td-t-day blank">18-10-15</td>
+						<td class="only-pc">58</td>
+					</tr>
+					<tr>
+						<td class="only-pc">2</td>
+						<td class="td-t-area">수안보</td>
+						<td class="td-t-type blank">습득</td>
+						<td class="td-t-lost block txt-l"><a href="">메모리카드</a><i class="ico_common ico_secret"></i></td>
+						<td class="td-t-person">서천연수원</td>
+						<td class="td-t-day blank">18-10-15</td>
+						<td class="only-pc">58</td>
+					</tr>
+					<tr>
+						<td class="only-pc">1</td>
+						<td class="td-t-area">수안보</td>
+						<td class="td-t-type blank">분실</td>
+						<td class="td-t-lost block txt-l"><a href="">휴대용 게임기</a></td>
+						<td class="td-t-person">수안보연수원</td>
+						<td class="td-t-day blank">18-10-15</td>
+						<td class="only-pc">58</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="h2">table Type D</p>
+			<div class="type_view">
+				<table class="tb-type_d">
+					<caption class="dot-item">비품구성</caption>
+					<colgroup>
+						<col class="cols-w3">
+						<col class="col-auto">
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">가구류</th>
+						<td>TV받침대/쇼파/식탁/식탁의자/침대매트/침대헤드보드/화장대</td>
+					</tr>
+					<tr>
+						<th scope="row">가전류</th>
+						<td>TV/에어컨/냉장고/전기밥솥/전기쿡탑</td>
+					</tr>
+					<tr>
+						<th scope="row">식기류</th>
+						<td>객실정원에 맞는 식기 일체</td>
+					</tr>
+					<tr>
+						<th scope="row">침구류</th>
+						<td>객실 정원에 맞는 침구류(이불/요/배게)일체</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="h2">table Type E</p>
+			<div class="type_view">
+				<div class="fake-table">
+					<div class="col-area">
+						<div class="col-group">
+							<div class="col th">연수원</div>
+							<div class="col td">속초 수련</div>
+						</div>
+						<div class="col-group">
+							<div class="col th">이용일</div>
+							<div class="col td">2018-09-07 ~ 2018-09-08 (2박)</div>
+						</div>
+					</div>
+					<div class="col-area">
+						<div class="col-group">
+							<div class="col th">이용객실</div>
+							<div class="col td">C형 (37.28㎡ / 최대 4인)</div>
+						</div>
+						<div class="col-group">
+							<div class="col th">차감포인트</div>
+							<div class="col td">20point(성수기)</div>
+						</div>
+					</div>
+					<div class="col-area section">
+						<div class="col-group">
+							<div class="col th">예약자명</div>
+							<div class="col td">홍길동</div>
+						</div>
+						<div class="col-group">
+							<div class="col th">예약번호</div>
+							<div class="col td">자동할당됨</div>
+						</div>
+					</div>
+					<div class="col-area">
+						<div class="col-group">
+							<div class="col th">소속</div>
+							<div class="col td">시의회</div>
+						</div>
+						<div class="col-group">
+							<div class="col th">부서</div>
+							<div class="col td">유지보수</div>
+						</div>
+					</div>
+					<div class="col-area">
+						<div class="col-group">
+							<div class="col th">예약자 휴대폰 번호</div>
+							<div class="col td">010-1234-5678</div>
+						</div>
+						<div class="col-group">
+							<div class="col th">방문자 휴대폰 번호</div>
+							<div class="col td">
+								<div class="form-row">
+									<div class="form-col">
+										<div class="ui-select">
+											<select class="sel_type" id="cellChoice">
+												<option selected="selected">선택</option>
+												<option>010</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-col_txt">-</div>
+									<div class="form-col"><input type="text"></div>
+									<div class="form-col_txt">-</div>
+									<div class="form-col"><input type="text"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-area">
+						<div class="col-group full">
+							<div class="col th">인원</div>
+							<div class="col td">
+								<span class="small-in"><input type="text"><span class="small-in_txt">명</span></span>
+								<span class="point-col3 m_block">(기입하신 인원수는 예약 내용 혹은 방배정과는 연관이 없으며, 단순 입실 확인용입니다.)</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-area section">
+						<div class="col-group full">
+							<div class="col th">예약자명</div>
+							<div class="col td">
+								<textarea name="" cols="30" rows="10"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="h2">view Type A</p>
+			<div class="type_view">
+				<div class="view-title-area mgt-ms">
+					<p class="view-title">[통합] 서울특별시 연수원 운영규정안. “필독”</p>
+					<p class="view-info mgt-s">
+						<span class="view-info-item">서울시연수원</span>
+						<span class="view-info-item">2018-01-30</span>
+						<span class="view-info-item">조회:334회</span>
+					</p>
+				</div>
+				<div class="view-file">
+					<p class="file-item"><a href=""><i class="ico_common ico_file"></i>서울특별시 연수원 운영규정안내 1.pdf</a></p>
+					<p class="file-item"><a href=""><i class="ico_common ico_file"></i>서울특별시 연수원 운영규정안내 2.hwp</a></p>
+					<p class="file-item"><a href=""><i class="ico_common ico_file"></i>서울특별시 연수원 운영규정안내 3.docx</a></p>
+				</div>
+				<div class="view-contents">
+					<p>서울특별시 연수원 운영규정을 첨부하였으니 확인하시고 이용바랍니다.</p>
+				</div>
+			</div>
+			<p class="h2">Paging</p>
+			<div class="type_view">
+				<div class="paging">
+					<a href="#" title="처음" class="ico_fromb pprev"></a>
+					<a href="#" title="이전" class="ico_fromb prev"></a>
+					<a href="#">1</a>
+					<a href="#" class="active">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#" title="다음" class="ico_fromb next"></a>
+					<a href="#" title="마지막" class="ico_fromb nnext"></a>
+				</div>
+			</div>
+			<p class="h2">이전/다음글</p>
+			<div class="type_view">
+				<div class="prenex-wrap mgt-m">
+					<dl class="prenex-item">
+						<dt>이전글</dt>
+						<dd>이전글이 없습니다.</dd>
+					</dl>
+					<dl class="prenex-item">
+						<dt>다음글</dt>
+						<dd><a href="" class="clamp">[속초] 10월 사우나 운영안내</a></dd>
+					</dl>
+				</div>
+			</div>
+			<p class="h2">관리자 댓글</p>
+			<div class="type_view">
+				<div class="admin-comment-area">
+					<div class="admin-comment">
+						<div class="admin-comment-item_a">객실내 수건은 있으나 치약은 비치되어 있지 않습니다. 전자레인지는 각 층별로 비치되어 있습니다. 객실내 수건은 있으나 치약은 비치되어 있지 않습니다. 전자레인지는 각 층별로 비치되어 있습니다. 객실내 수건은 있으나 치약은 비치되어 있지 않습니다. 전자레인지는 각 층별로 비치되어 있습니다. </div>
+						<div class="admin-comment-item_b">서천연수원</div>
+						<div class="admin-comment-item_c">2018-09-21</div>
+					</div>
+					<div class="admin-comment">
+						<div class="admin-comment-item_a">객실내 수건은 있으나 치약은 비치되어 있지 않습니다. 전자레인지는 각 층별로 비치되어 있습니다.</div>
+						<div class="admin-comment-item_b">서천연수원</div>
+						<div class="admin-comment-item_c">2018-09-21</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="group07" class="group_wrap">
+		<p class="h1">UI</p>
+		<div class="box_wrap">
+			<p class="h2">Breadcrumb</p>
+			<div class="type_view">
+				<div class="breadcrumb">
+					<span class="breadcrumb-item">홈</span>
+					<span class="breadcrumb-item">온라인</span>
+					<span class="breadcrumb-item">예약신청</span>
+				</div>
+			</div>
+			<p class="h2">result (박스형)</p>
+			<div class="type_view">
+				<div class="result-box">
+					<p class="fsize-m">총 <em class="point-col1">2개</em>의 검색결과가 있습니다.</p>
+				</div>
+			</div>
+			<p class="h2">result (라인형)</p>
+			<div class="type_view">
+				<div class="result-box_b">
+					<p class="fsize-m">총 <em class="point-col2">2개</em>의 검색결과가 있습니다.</p>
+				</div>
+			</div>
+			<!--<p class="h2">Tab</p>
+			<div class="type_view">
+				<div class="tab-area">
+					<ul class="tab-type_a">
+						<li><button type="button" class="active">속초연수원</button></li>
+						<li><button type="button">수안보연수원</button></li>
+						<li><button type="button">서천연수원</button></li>
+					</ul>
+				</div>
+			</div>-->
+			<p class="h2">검색 5</p>
+			<div class="type_view">
+				<div class="sh-wrap">
+					<form action="">
+						<fieldset>
+							<legend>검색</legend>
+							<div class="sh-box">
+								<div class="sh-item-from">
+									<label for="" class="sh-item-title">연수원 선택</label>
+									<div class="ui-select">
+										<select class="sel_type" id="selectID_sh01">
+											<option selected="selected">선택</option>
+											<option>속초 수련원</option>
+											<option>수안보연수원</option>
+											<option>서천연수원</option>
+										</select>
+									</div>
+								</div>
+								<div class="sh-item-from">
+									<label for="" class="sh-item-title">체크인<span class="sub-t only-pc">IN</span></label>
+									<span class="datepicker-box"><input type="text" name="" value="" placeholder="" class="inp-date"></span>
+								</div>
+								<div class="sh-item-from small">
+									<label for="" class="sh-item-title">숙박일</label>
+									<div class="ui-select">
+										<select class="sel_type" id="selectID_sh02">
+											<option selected="selected">선택</option>
+											<option>속초 수련원</option>
+											<option>수안보연수원</option>
+											<option>서천연수원</option>
+										</select>
+									</div>
+								</div>
+								<div class="sh-item-from">
+									<label for="" class="sh-item-title">체크아웃<span class="sub-t only-pc">OUT</span></label>
+									<span class="datepicker-box"><input type="text" name="" value="" placeholder="" class="inp-date"></span>
+								</div>
+								<div class="sh-item-from small">
+									<label for="" class="sh-item-title">인원</label>
+									<div class="ui-select">
+										<select class="sel_type" id="selectID_sh03">
+											<option selected="selected">선택</option>
+											<option>속초 수련원</option>
+											<option>수안보연수원</option>
+											<option>서천연수원</option>
+										</select>
+									</div>
+								</div>
+								<div class="sh-item-btn">
+									<button type="button" class="sh-btn"><span class="only-pc">srarch</span>검색</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<p class="h2">검색 3</p>
+			<div class="type_view">
+				<div class="sh-wrap">
+					<form action="">
+						<fieldset>
+							<legend>검색</legend>
+							<div class="sh-box type_b">
+								<div class="sh-item-from">
+									<label for="" class="sh-item-title">연수원 선택</label>
+									<div class="ui-select">
+										<select class="sel_type" id="selectID_sh04">
+											<option selected="selected">선택</option>
+											<option>속초 수련원</option>
+											<option>수안보연수원</option>
+											<option>서천연수원</option>
+										</select>
+									</div>
+								</div>
+								<div class="sh-item-from">
+									<label for="" class="sh-item-title">체크인<span class="sub-t only-pc">IN</span></label>
+									<span class="datepicker-box"><input type="text" name="" value="" placeholder="" class="inp-date"></span>
+								</div>
+								<div class="sh-item-from">
+									<label for="" class="sh-item-title">체크아웃<span class="sub-t  only-pc">OUT</span></label>
+									<span class="datepicker-box"><input type="text" name="" value="" placeholder="" class="inp-date"></span>
+								</div>
+								<div class="sh-item-btn">
+									<button type="button" class="sh-btn"><span class="only-pc">srarch</span>검색</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<p class="h2">게시판 검색 상단</p>
+			<div class="type_view">
+				<div class="sh-wrap_b">
+					<form action="">
+						<fieldset>
+							<legend>검색</legend>
+							<div class="table-search_a">
+								<div class="sh-item-from">
+									<div class="ui-select">
+										<select class="sel_type" id="areaChoic2">
+											<option selected="selected">전체</option>
+											<option >통합</option>
+											<option>속초 수련원</option>
+											<option>수안보연수원</option>
+											<option>서천연수원</option>
+										</select>
+									</div>
+								</div>
+								<div class="sh-sort">
+									<span class="sh-sort-col"><button type="button" class="sh-sort-item active">전체</button></span>
+									<span class="sh-sort-col"><button type="button" class="sh-sort-item">분실</button></span>
+									<span class="sh-sort-col"><button type="button" class="sh-sort-item">습득</button></span>
+								</div>
+								<div class="sh-total">
+									<span>총 103건 ( <em class="point-col2">1</em> / 11 Page)</span>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<p class="h2">게시판 검색 하단</p>
+			<div class="type_view">
+				<div class="sh-wrap_c">
+					<form action="">
+						<fieldset>
+							<legend>검색</legend>
+							<div class="table-search_b">
+								<div class="sh-item-from medium">
+									<div class="ui-select">
+										<select class="sel_type" id="areaChoice2">
+											<option selected="selected">전체</option>
+											<option>속초</option>
+											<option>서천</option>
+											<option>수안보</option>
+										</select>
+									</div>
+								</div>
+								<div class="sh-item-from">
+									<input type="text" name="" value="" placeholder="">
+								</div>
+								<div class="sh-item-btn">
+									<button type="button" class="btn-basic3">검색</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<p class="h2">FAQ 검색</p>
+			<div class="type_view">
+				<div class="sh-wrap_c not-bg">
+					<form action="">
+						<fieldset>
+							<legend>검색</legend>
+							<div class="table-search_b">
+								<div class="sh-item-from">
+									<input type="text" name="" value="" placeholder="">
+								</div>
+								<div class="sh-item-btn">
+									<button type="button" class="btn-basic7"><i class="ico_from ico_sh"></i>검색</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<p class="h2">검색 상단 선택</p>
+			<div class="type_view">
+				<div class="search-top-group">
+					<div class="search-choice-group">
+						<span class="search-choice-item">
+							<input type="radio" id="searchChoice01" name="searchChoice" checked="checked">
+							<label for="searchChoice01">속초연수원</label>
+						</span>
+						<span class="search-choice-item">
+							<input type="radio" id="searchChoice02" name="searchChoice">
+							<label for="searchChoice02">수안보연수원</label>
+						</span>
+						<span class="search-choice-item">
+							<input type="radio" id="searchChoice03" name="searchChoice">
+							<label for="searchChoice03">서천연수원</label>
+						</span>
+					</div>
+					<ul class="legend-list only-pc">
+						<li class="legend-item"><i class="legend-type_a"></i>선택날짜</li>
+						<li class="legend-item"><i class="legend-type_b"></i>선택가능날짜</li>
+						<li class="legend-item"><i class="legend-type_c"></i>선택불가능날짜</li>
+					</ul>
+				</div>
+			</div>
+			<p class="h2">STEP</p>
+			<div class="type_view">
+				<div class="step-area">
+					<ol class="step-type_a">
+						<li class="step-item active">
+							<div class="step-item_box">
+								<i class="ico_common ico_step1"></i>
+								<p class="step-txt">
+									<span class="step-number">STEP.01</span>
+									<span class="step-info">날짜/인원/객실선택</span>
+								</p>
+							</div>
+						</li>
+						<li class="step-item">
+							<div class="step-item_box">
+								<i class="ico_common ico_step2"></i>
+								<p class="step-txt">
+									<span class="step-number">STEP.02</span>
+									<span class="step-info">예약 정보 입력</span>
+								</p>
+							</div>
+						</li>
+						<li class="step-item">
+							<div class="step-item_box">
+								<i class="ico_common ico_step3"></i>
+								<p class="step-txt">
+									<span class="step-number">STEP.03</span>
+									<span class="step-info">예약 완료</span>
+								</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<p class="h2">accordion</p>
+			<div class="type_view">
+				<div class="ui-acco faq-wrap" role="group" id="faqList">
+					<div class="ui-acco-wrap">
+						<div class="ui-acco-tit">
+							<button type="button" class="ui-acco-btn"><span class="faq-blt_q">Q</span>예약자 본인이 입실하지 못할 예약자 본인이 입실하지 못할 예약자 본인이 입실하지 못할 예약자 본인이 입실하지 못할 예약자 본인이 입실하지 못할 예약자 본인이 입실하지 못할 경우?</button>
+						</div>
+						<div class="ui-acco-pnl">
+							<span class="faq-blt_a">A</span>부모님이나 자녀들만 수련원을 이용할 경우 가족관계증명서 또는 의료보험카드와 오시는 분(부모님 또는 자녀분 중 한분)의 신분증을 지참하시면 됩니다. 부모님이나 자녀들만 수련원을 이용할 경우 가족관계증명서 또는 의료보험카드와 오시는 분(부모님 또는 자녀분 중 한분)의 신분증을 지참하시면 됩니다.
+						</div>
+					</div>
+					<dl class="ui-acco-wrap">
+						<dt class="ui-acco-tit">
+							<button type="button" class="ui-acco-btn"><span class="faq-blt_q">Q</span>예약자 본인이 입실하지 못할 경우?</button>
+						</dt>
+						<dd class="ui-acco-pnl">
+							<span class="faq-blt_a">A</span>부모님이나 자녀들만 수련원을 이용할 경우 가족관계증명서 또는 의료보험카드와 오시는 분(부모님 또는 자녀분 중 한분)의 신분증을 지참하시면 됩니다.
+						</dd>
+					</dl>
+					<dl class="ui-acco-wrap">
+						<dt class="ui-acco-tit">
+							<button type="button" class="ui-acco-btn"><span class="faq-blt_q">Q</span>질문합니다 3</button>
+						</dt>
+						<dd class="ui-acco-pnl">
+							<span class="faq-blt_a">A</span>부모님이나 자녀들만 수련원을 이용할 경우 가족관계증명서 또는 의료보험카드와 오시는 분(부모님 또는 자녀분 중 한분)의 신분증을 지참하시면 됩니다.
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<p class="h2">유의사항</p>
+			<div class="type_view">
+				<div class="attention_wrap">
+					<p class="ico_comb attention">유의사항</p>
+					<ul class="dot_list">
+						<li>출국 당일 각 공항 및 부두의 현대면세점 인도장에서 교환권, 여권, 항공티켓을 제시해 주시면 본인 확인 후 상품을 인도받으실 수 있습니다. <br>(인터넷 면세점 구매의 경우 교환권을 출력하여 지참해주시길 바랍니다.)</li>
+						<li>구입하신 면세물품 수령은 출국 시 출국보세구역(공항 및 항만) 인도장에서만 가능하며, 입국 시에는 수령 불가합니다.</li>
+						<li>상품 수령 시 구입 물품의 수량과 품명을 즉시 확인하시고 인수란에 서명해 주시기 바랍니다.</li>
+						<li>출국 후의 물품에 대한 책임을 지지 않습니다. (만약 이상이 있는 경우에는 인도장 직원에게 바로 통보하여 주시기 바랍니다.)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="btnTop"><a href="#;">top</a></div>
+<script>
+    ;(function($, win, doc, undefined) {
+        $(doc).ready(function(){
+            $plugins.page.accordion();
+        });
+    })(jQuery, window, document);
+</script>
+</body>
+</html>

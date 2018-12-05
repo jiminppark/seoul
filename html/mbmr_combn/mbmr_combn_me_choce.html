@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>아이디 통합 | 서울시 연수원</title>
+
+	<link rel="apple-touch-icon" href="../../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../../resources/img/common/ico_favicon.ico">
+
+	<link rel="stylesheet" href="../../resources/css/ui.base.css">
+
+	<script src="../../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../../resources/js/lib/jquery-ui.min.js"></script>
+	<script src="../../resources/js/lib/jquery.smoothwheel.js"></script>
+	<script src="../../resources/js/lib/owl.carousel.js"></script>
+
+	<script src="../../resources/js/ui.plugins.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>
+	<script src="../../resources/js/ui.page.js"></script>
+
+</head>
+
+<body>
+<div class="base-skip" id="baseSkip"></div>
+<div class="base-layer" id="baseLayer"></div>
+<div class="base-wrap" id="baseWrap">
+	<header class="base-header" id="sHeader"></header>
+	<main class="base-main" id="baseMain" role="main">
+		<div class="base-content" id="baseContent">
+
+			<!-- content ---------------------------------------------------------------------------------------------- -->
+
+			<div class="contents-area">
+				<!-- S : title area -->
+				<div class="title-box type-b">
+					<h2 class="h-type_a">아이디 통합</h2>
+				</div>
+				<!-- E : title area -->
+
+				<!-- S : agree area -->
+				<div class="small-area mgt-m">
+					<p class="fsize-m"><span class="point-col2">홍길동</span> 님의 기 가입 아이디는 다음과 같습니다.</p>
+					<p class="fsize-s txt-c mgt-xs">새로운 서울시 공무원 연수원에서 사용하실 아이디를 선택하여 주십시오.<br>새로운 ID를 사용하시기 원하시면, <span class="point-col2">‘신규 아이디로 통합‘</span> 버튼을 눌러주십시오.</p>
+					<div class="txt-box mgt-ms">
+						<ul class="list-type_a">
+							<li>
+								<span class="radio">
+									<input type="radio" name="termType" id="id01">
+									<label for="id01">gildonghong (속초연수원)</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="termType" id="id02">
+									<label for="id02">gdhong (서천/수안보연수원)</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio">
+									<input type="radio" name="termType" id="id03">
+									<label for="id03">gdhong (서천/수안보연수원)</label>
+								</span>
+							</li>
+						</ul>
+					</div>
+					<!-- S : button area -->
+					<div class="btn-area mgt-ms">
+						<button type="button" class="btn-basic1">선택한 아이디로 통합</button>
+						<button type="button" class="btn-basic3">신규 아이디로 통합</button>
+					</div>
+					<!-- E : button area -->
+				</div>
+				<!-- E : agree area -->
+				<footer id="sFooter"></footer>
+
+			</div>
+
+			<!-- //content ---------------------------------------------------------------------------------------------- -->
+
+		</div>
+	</main>
+</div>
+<!-- S : dialog -->
+<div id="idFind" title="서울시 공무원 인증">
+	<div class="layer-popup">
+		<p class="layer-big_a">서울시 공무원 인증</p>
+		<p class="layer-txt_b mgt-s">본인을 선택하여 주십시오.</p>
+		<table class="tb-type_c mgt-xs">
+			<caption></caption>
+			<colgroup>
+				<col class="cols-w9">
+				<col class="cols-w5">
+				<col>
+				<col>
+				<col>
+			</colgroup>
+			<thead>
+			<tr>
+				<th scope="col">선택</th>
+				<th scope="col">이름</th>
+				<th scope="col">생년월일</th>
+				<th scope="col">소속</th>
+				<th scope="col">부서</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>
+					<span class="radio no_label">
+						<input type="radio" name="iChoice" id="i01">
+						<label for="i01">선택</label>
+					</span>
+				</td>
+				<td>홍길동</td>
+				<td>730401</td>
+				<td>행정국</td>
+				<td>인력개발과</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="radio no_label">
+						<input type="radio" name="iChoice" id="i02">
+						<label for="i02">선택</label>
+					</span>
+				</td>
+				<td>홍길동</td>
+				<td>730401</td>
+				<td>금천구</td>
+				<td>청소행정과</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="radio no_label">
+						<input type="radio" name="iChoice" id="i03">
+						<label for="i03">선택</label>
+					</span>
+				</td>
+				<td>홍길동</td>
+				<td>730401</td>
+				<td>서대문구</td>
+				<td>보건위생과</td>
+			</tr>
+			</tbody>
+		</table>
+		<div class="btn-area">
+			<button type="button" class="btn-basic3 small">확인</button>
+		</div>
+	</div>
+</div>
+<!-- E : dialog -->
+
+
+<script>
+    ;(function($, win, doc, undefined) {
+        $(doc).ready(function(){
+            console.log('page');
+            $plugins.page.template();
+            // 레이어 팝업
+            $("#idFind").dialog({
+                dialogClass: "no_title",
+                resizable: false,
+                width:600,
+                maxHeight: 720,
+                modal: true
+            });
+        });
+    })(jQuery, window, document);
+</script>
+</body>
+</html>

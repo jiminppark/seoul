@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+    
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+    <title>기본 템플릿 페이지 | 서울시 연수원</title>
+
+	<link rel="apple-touch-icon" href="../../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../../resources/img/common/ico_favicon.ico"> 
+
+	<link rel="stylesheet" href="../../resources/css/ui.base.css">
+
+	<script src="../../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../../resources/js/lib/jquery-ui.min.js"></script>
+	<script src="../../resources/js/lib/jquery.smoothwheel.js"></script>
+    <script src="../../resources/js/lib/owl.carousel.js"></script>
+
+    <script src="../../resources/js/ui.plugins.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+    <script src="../../resources/js/ui.page.js"></script>
+</head>
+
+<body>
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-layer" id="baseLayer"></div>
+	<div class="base-wrap" id="baseWrap">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain">
+            <!-- //content ---------------------------------------------------------------------------------------------- -->
+			
+			<div class="div-inner">
+                <div class="ui-codinglist" id="uiCodinglist"></div>
+            </div>	
+
+            <!-- //content ---------------------------------------------------------------------------------------------- -->
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+    
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			
+			console.log('page');
+            $plugins.common.pageid = 'G00_00_00_00';
+            $plugins.uiCodinglist({
+				id:'uiCodinglist', 
+				url:'../../resources/data/codinglist.json', 
+				type:'json'
+			});
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

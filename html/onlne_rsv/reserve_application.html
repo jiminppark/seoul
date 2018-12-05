@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+    
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+    <title>예약신청 | 서울시 연수원</title>
+
+	<link rel="apple-touch-icon" href="../../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../../resources/img/common/ico_favicon.ico"> 
+
+	<link rel="stylesheet" href="../../resources/css/ui.base.css">
+
+	<script src="../../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../../resources/js/lib/jquery-ui.min.js"></script>
+	<script src="../../resources/js/lib/jquery.smoothwheel.js"></script>
+    <script src="../../resources/js/lib/owl.carousel.js"></script>
+
+    <script src="../../resources/js/ui.plugins.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+    <script src="../../resources/js/ui.page.js"></script>
+
+</head>
+
+<body>
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-layer" id="baseLayer"></div>
+	<div class="base-wrap" id="baseWrap">
+		<header class="base-header" id="baseHeader"></header>
+		<main class="base-main" id="baseMain" role="main">
+			<div class="base-content" id="baseContent">
+				
+				<!-- content ---------------------------------------------------------------------------------------------- -->
+				
+				<div class="contents-area">
+					<!-- S : title area -->
+					<div class="type_view">
+						<div class="title-box">
+							<h2 class="h-type_a">예약신청</h2>
+							<div class="breadcrumb">
+								<span class="breadcrumb-item">홈</span>
+								<span class="breadcrumb-item">온라인</span>
+								<span class="breadcrumb-item">예약신청</span>
+							</div>
+						</div>
+					</div>
+					<!-- E : title area -->
+
+					<!-- S : search area -->
+					<div class="sh-wrap mgt-m">
+						<form action="">
+							<fieldset>
+								<legend>검색</legend>
+								<div class="sh-box type_b">
+									<div class="sh-item-from">
+										<label for="areaChoice" class="sh-item-title">연수원 선택</label>
+										<div class="ui-select">
+											<select class="sel_type" id="areaChoice">
+												<option selected="selected">선택</option>
+												<option>속초 수련원</option>
+												<option>수안보연수원</option>
+												<option>서천연수원</option>
+											</select>
+										</div>
+									</div>
+									<div class="sh-item-from">
+										<label for="checkin" class="sh-item-title">체크인<span class="sub-t only-pc">IN</span></label>
+										<span class="datepicker-box"><input type="text" name="" value="" id="checkin" placeholder="" class="inp-date"></span>
+									</div>
+									<div class="sh-item-from">
+										<label for="checkout" class="sh-item-title">체크아웃<span class="sub-t  only-pc">OUT</span></label>
+										<span class="datepicker-box"><input type="text" id="checkout" name="" value="" placeholder="" class="inp-date"></span>
+									</div>
+									<div class="sh-item-btn">
+										<button type="button" class="sh-btn"><span class="only-pc">srarch</span>검색</button>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<!-- E : search area -->
+
+					<!-- S : result area -->
+					<div class="result-box_b">
+						<p class="fsize-m">총 <em class="point-col2">5개</em>의 검색결과가 있습니다.</p>
+					</div>
+					<div class="box-module_a">
+						<div class="box-item">
+							<div class="img-area"><img src="../../resources/img/temp/room01.jpg" alt=""></div>
+							<div class="info-area">
+								<dl class="dl-type_a">
+									<dt><p class="room-type">A형</p><button type="button" class="btn-basic1 small">상세보기</button></dt>
+									<dd>29.28m<sup>2</sup>/최대 7인<br>성수기 비수기</dd>
+								</dl>
+							</div>
+							<div class="check-area">
+							<span class="radio big">
+								<input type="radio" name="termType" id="termType001">
+								<label for="termType001">객실선택하기</label>
+							</span>
+							</div>
+						</div>
+						<div class="box-item">
+							<div class="img-area"><img src="../../resources/img/temp/room02.jpg" alt=""></div>
+							<div class="info-area">
+								<dl class="dl-type_a">
+									<dt><p class="room-type">B형</p><button type="button" class="btn-basic1 small">상세보기</button></dt>
+									<dd>29.28m<sup>2</sup>/최대 7인<br>성수기 비수기</dd>
+								</dl>
+							</div>
+							<div class="check-area">
+							<span class="radio big">
+								<input type="radio" name="termType" id="termType002">
+								<label for="termType002">객실선택하기</label>
+							</span>
+							</div>
+						</div>
+						<div class="box-item active">
+							<div class="img-area"><img src="../../resources/img/temp/room01.jpg" alt=""></div>
+							<div class="info-area">
+								<dl class="dl-type_a">
+									<dt><p class="room-type">C형</p><button type="button" class="btn-basic1 small">상세보기</button></dt>
+									<dd>29.28m<sup>2</sup>/최대 7인<br>성수기 비수기</dd>
+								</dl>
+							</div>
+							<div class="check-area">
+							<span class="radio big">
+								<input type="radio" name="termType" id="termType003" checked="checked">
+								<label for="termType003">객실선택하기</label>
+							</span>
+							</div>
+						</div>
+						<div class="box-item">
+							<div class="img-area"><img src="../../resources/img/temp/room02.jpg" alt=""></div>
+							<div class="info-area">
+								<dl class="dl-type_a">
+									<dt><p class="room-type">B형</p><button type="button" class="btn-basic1 small">상세보기</button></dt>
+									<dd>29.28m<sup>2</sup>/최대 7인<br>성수기 비수기</dd>
+								</dl>
+							</div>
+							<div class="check-area">
+							<span class="radio big">
+								<input type="radio" name="termType" id="termType004">
+								<label for="termType004">객실선택하기</label>
+							</span>
+							</div>
+						</div>
+						<div class="box-item">
+							<div class="img-area"><img src="../../resources/img/temp/room01.jpg" alt=""></div>
+							<div class="info-area">
+								<dl class="dl-type_a">
+									<dt><p class="room-type">A형</p><button type="button" class="btn-basic1 small">상세보기</button></dt>
+									<dd>29.28m<sup>2</sup>/최대 7인<br>성수기 비수기</dd>
+								</dl>
+							</div>
+							<div class="check-area">
+							<span class="radio big">
+								<input type="radio" name="termType" id="termType005">
+								<label for="termType005">객실선택하기</label>
+							</span>
+							</div>
+						</div>
+					</div>
+					<!-- E : result area -->
+
+					<!-- S : table area -->
+					<div class="fake-table mgt-b">
+						<div class="col-area">
+							<div class="col-group">
+								<div class="col th">연수원</div>
+								<div class="col td">속초 수련</div>
+							</div>
+							<div class="col-group">
+								<div class="col th">이용일</div>
+								<div class="col td">2018-09-07 ~ 2018-09-08 (2박)</div>
+							</div>
+						</div>
+						<div class="col-area">
+							<div class="col-group">
+								<div class="col th">이용객실</div>
+								<div class="col td">C형 (37.28㎡ / 최대 4인)</div>
+							</div>
+							<div class="col-group">
+								<div class="col th">차감포인트</div>
+								<div class="col td">20point(성수기)</div>
+							</div>
+						</div>
+						<div class="col-area section">
+							<div class="col-group">
+								<div class="col th">예약자명</div>
+								<div class="col td">홍길동</div>
+							</div>
+							<div class="col-group">
+								<div class="col th">예약번호</div>
+								<div class="col td">자동할당됨</div>
+							</div>
+						</div>
+						<div class="col-area">
+							<div class="col-group">
+								<div class="col th">소속</div>
+								<div class="col td">시의회</div>
+							</div>
+							<div class="col-group">
+								<div class="col th">부서</div>
+								<div class="col td">유지보수</div>
+							</div>
+						</div>
+						<div class="col-area">
+							<div class="col-group">
+								<div class="col th">예약자 휴대폰 번호</div>
+								<div class="col td">010-1234-5678</div>
+							</div>
+							<div class="col-group">
+								<div class="col th">방문자 휴대폰 번호</div>
+								<div class="col td">
+									<div class="form-row">
+										<div class="form-col">
+											<div class="ui-select">
+												<select class="sel_type" id="cellChoice">
+													<option selected="selected">선택</option>
+													<option>010</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-col_txt">-</div>
+										<div class="form-col"><input type="text"></div>
+										<div class="form-col_txt">-</div>
+										<div class="form-col"><input type="text"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-area">
+							<div class="col-group full">
+								<div class="col th">인원</div>
+								<div class="col td">
+									<span class="small-in"><input type="text"><span class="small-in_txt">명</span></span>
+									<span class="point-col3 m_block">(기입하신 인원수는 예약 내용 혹은 방배정과는 연관이 없으며, 단순 입실 확인용입니다.)</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-area section">
+							<div class="col-group full">
+								<div class="col th">예약자명</div>
+								<div class="col td">
+									<textarea name="" cols="30" rows="10"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- E : table area -->
+
+					<!-- S : button area -->
+					<div class="btn-area mgt-ms">
+						<button type="button" class="btn-basic1 big">취소</button>
+						<button type="button" class="btn-basic3 big">예약하기</button>
+					</div>
+					<!-- E : button area -->
+				</div>
+	
+				<!-- //content ---------------------------------------------------------------------------------------------- -->
+
+			</div>
+		</main>
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+
+	<script>
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			console.log('page');
+            $plugins.page.template();
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>
